@@ -1,0 +1,67 @@
+
+.pushy {
+  padding-top: 130px;
+}
+.side-menu {
+  li {
+    margin-left: 60px;
+    margin: 0 0 15px 60px;
+    a {
+      text-transform: uppercase;
+      color: $white;
+    }
+    a:hover {
+      color: $light-green;
+    }
+  }
+}
+
+.container-menu {
+  background: $light-green;
+  @include clearfix;
+  height: 68px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10000;
+  .menu-btn {
+    height: 100%;
+    display: block;
+    float: left;
+    width: 68px;
+    text-align: center;
+    line-height: 68px;
+    background: $medium-green url('../images/icon-bt-menu.png') no-repeat center;
+    text-indent: -9000px;
+  }
+  .social-menu {
+    float: right;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    li {
+      float: left;
+      height: 100%;
+      width: 68px;
+      background: $medium-green;
+      padding: 0;
+      margin: 0 0 0 1px;
+      &.twitter {
+        a {
+          display: block;
+          height: 100%;
+          text-indent: -9000px;
+          background: url('../images/icon-social-twitter.png') no-repeat center;
+        }
+      }
+      &.facebook {
+        a {
+          display: block;
+          height: 100%;
+          text-indent: -9000px;
+          background: url('../images/icon-social-facebook.png') no-repeat center;
+        }
+      }
+    }
+  }
+}
