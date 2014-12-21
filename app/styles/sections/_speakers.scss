@@ -4,3 +4,81 @@
 .speakers-wrapper {
   @include outer-container;
 }
+
+
+.speaker-list {
+  @include row();
+  @include fill-parent();
+  margin-top: 100px;
+  .speaker-item {
+    @include span-columns(6);
+    background: #172838;
+    @include omega(2n);
+    width: 50%;
+
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+
+    .speaker-profile-picture {
+      width: 50%;
+      height: 100%;
+      display: block;
+      float: left;
+      position: relative;
+      @include media($mobile) {
+        @include span-columns(4);
+      }
+      &>img {
+        display: block;
+      }
+      .hover-profile-picture {
+        position: absolute;
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+        @include transition(opacity 0.2s ease-in-out);
+      }
+    }
+    .speaker-profile-informations {
+      width: 50%;
+      float: left;
+      padding: 20px;
+      color: #fff;
+      @include media($mobile) {
+        @include span-columns(4);
+      }
+      .speaker-name {
+        font-size: 25px;
+        font-weight: 100;
+        color: #fff;
+        display: block;
+      }
+      .speaker-job {
+        font-weight: bold;
+        font-size: 13px;
+        color: #1abc9c;
+        display: block;
+      }
+      .speaker-description {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 14px;
+        display: block;
+        padding-top: 6px;
+      }
+    }
+
+    &:hover {
+      .hover-profile-picture {
+        opacity: 1;
+      }
+    }
+
+
+
+  }
+  .speaker-item:nth-child(1n) {
+    margin: 0;
+  }
+}
