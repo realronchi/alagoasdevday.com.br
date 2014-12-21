@@ -1,0 +1,20 @@
+.organizers {
+  .section-title {
+    color: #ffffff;
+  }
+  background: #0c1123;
+  padding-top: 230px;
+  padding-bottom: 230px;
+  position: relative;
+  .top-cloud {
+    background: url('../images/top-clouds.png') center top repeat-x;
+    position: absolute;
+    height: 201px;
+    width: 100%;
+    top: 0px;
+    left: 0;
+  }
+}
+.organizers-wrapper {
+  @include outer-container;
+}

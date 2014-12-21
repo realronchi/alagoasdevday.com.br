@@ -6,17 +6,17 @@
 @import "components/pushy";
 @import "components/menu";
 
+// Sections
+@import "sections/ovini";
+@import "sections/for_whom";
+@import "sections/location";
+@import "sections/organizers";
+@import "sections/register";
+@import "sections/schedule";
+@import "sections/speakers";
+@import "sections/sponsors";
+@import "sections/workshop";
+
 body {
-  overflow: hidden;
-}
-
-
-
-
-// Gonna delete.. just for tests....
-.tester {
-  padding-top: 70px;
-  height: 10000px;
-  // background: red;
-  width: 100%;
+  // overflow: hidden;
 }

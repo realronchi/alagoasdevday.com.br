@@ -1,0 +1,36 @@
+
+.for-whom {
+  position: relative;
+  padding-top: 50px;
+}
+.for-whom .cloud {
+  background: url('../images/cloud.png') center top repeat-x;
+  position: absolute;
+  height: 190px;
+  width: 100%;
+  top: -140px;
+  left: 0;
+}
+
+.for-whon-wrapper {
+  @include outer-container;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

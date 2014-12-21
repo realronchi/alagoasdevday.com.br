@@ -1,0 +1,72 @@
+
+.header-ovini {
+  height: 850px;
+  background: #0b1025 url('../images/stars-header.jpg') top repeat-x;
+  position: relative;
+  overflow: hidden;
+  .rockets {
+    position: absolute;
+    right: 450px;
+    top: 840px;
+  }
+}
+.cloud-wrapper {
+  background: url('../images/opacity-cloud.png') center top repeat-x;
+  position: absolute;
+  height: 151px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+.ovini-animation {
+  width: 820px;
+  position: relative;
+  margin: 0 auto;
+}
+.register-header {
+  position: absolute;
+  top: 130px;
+  left: 500px;
+  opacity: 0;
+}
+.add-logo {
+  position: absolute;
+  top: 230px;
+  left: 50%;
+  margin-left: -26px;
+  width: 54px;
+  opacity: 0;
+}
+.ovini {
+  background: url('../images/ovini-without-light.png');
+  width: 269px;
+  height: 151px;
+  position: absolute;
+  top: 124px;
+  left: 50%;
+  margin-left: -135px;
+  .light {
+    background: url('../images/ovini-light.png');
+    width: 682px;
+    height: 558px;
+    position: absolute;
+    top: 120px;
+    left: -240px;
+    opacity: 0;
+  }
+}
+.event-date-local {
+  position: absolute;
+  top: 620px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  opacity: 0;
+  .date {
+    font-size: 24px;
+  }
+}
