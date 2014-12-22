@@ -3,5 +3,26 @@
 }
 
 .location-wrapper {
-  @include outer-container;
+  // @include outer-container;
+
+}
+
+.location-box {
+  margin: 70px 0;
+  background: #1aba9c url('../images/bg-location.jpg') no-repeat left center;
+  height: 660px;
+}
+
+.contact-info {
+  width: 50%;
+  float: left;
+}
+.map {
+  width: 50%;
+  float: left;
+}
+
+.contact-box {
+  min-width: 587px;
+  float: right;
 }
