@@ -59,13 +59,13 @@
     <!-- Pushy Menu -->
     <nav class="pushy pushy-left">
       <ul class="side-menu">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Palestrantes</a></li>
-        <li><a href="#">Programação</a></li>
-        <li><a href="#">Lightning-talks</a></li>
-        <li><a href="#">Local</a></li>
-        <li><a href="#">Workshop</a></li>
-        <li><a href="#">Patrocínio</a></li>
+        <li><a href="#home" du-smooth-scroll du-scrollspy offset="30">Inicio</a></li>
+        <li><a href="#speakers" du-smooth-scroll du-scrollspy offset="30">Palestrantes</a></li>
+        <li><a href="#schedule" du-smooth-scroll du-scrollspy offset="-30">Programação</a></li>
+        <li><a href="#speakers" du-smooth-scroll du-scrollspy offset="30">Lightning-talks</a></li>
+        <li><a href="#location" du-smooth-scroll du-scrollspy offset="80">Local</a></li>
+        <li><a href="#workshop" du-smooth-scroll du-scrollspy offset="80">Workshop</a></li>
+        <li><a href="#sponsors" du-smooth-scroll du-scrollspy offset="30">Patrocínio</a></li>
       </ul>
     </nav>
 
@@ -73,9 +73,10 @@
     <div class="site-overlay"></div>
 
     <!-- Your Content -->
-    <div id="container">
+    <div id="container" ng-controller="MainCtrl">
 
-      <section class="header-ovini">
+      <section class="header-ovini" id="home">
+        <canvas id="pixie"></canvas>
         <div class="cloud-wrapper"></div>
         <div class="ovini-animation">
           <div class="ovini">
@@ -95,7 +96,7 @@
         </div>
       </section>
 
-      <section class="for-whom">
+      <section class="for-whom" id="for-whom" >
         <div class="for-whon-wrapper">
           <h2 class="section-title">Um Evento para Quem?</h2>
 
@@ -141,7 +142,7 @@
         <div class="cloud"></div>
       </section>
 
-      <section class="speakers">
+      <section class="speakers" id="speakers">
         <div class="speakers-wrapper">
           <h2 class="section-title">Palestrantes</h2>
 
@@ -235,7 +236,7 @@
 
       </section>
 
-      <section class="schedule">
+      <section class="schedule" id="schedule">
         <div class="schedule-wrapper">
           <h2 class="section-title">Programação</h2>
 
@@ -245,7 +246,7 @@
         <div class="bottom-cloud"></div>
       </section>
 
-      <section class="location">
+      <section class="location" id="location">
         <div class="location-wrapper">
           <h2 class="section-title">Local</h2>
 
@@ -263,7 +264,7 @@
 
       </section>
 
-      <section class="workshop">
+      <section class="workshop" id="workshop">
         <div class="workshop-wrapper">
           <h2 class="section-title">Workshop</h2>
 
@@ -271,7 +272,7 @@
         </div>
       </section>
 
-      <section class="register">
+      <section class="register" id="register">
         <div class="register-wrapper">
           <h2 class="section-title">Inscreva-se Já!</h2>
 
@@ -279,7 +280,7 @@
         </div>
       </section>
 
-      <section class="sponsors">
+      <section class="sponsors" id="sponsors">
         <div class="sponsors-wrapper">
           <h2 class="section-title">Quem faz acontecer</h2>
 
@@ -287,7 +288,7 @@
         </div>
       </section>
 
-      <section class="organizers">
+      <section class="organizers" id="organizers">
         <div class="organizers-wrapper">
           <h2 class="section-title">Organizadores</h2>
 
@@ -295,7 +296,6 @@
         </div>
         <div class="top-cloud"></div>
       </section>
-
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -334,68 +334,16 @@
     <script src="bower_components/waypoints/lib/noframework.waypoints.min.js"></script>
     <script src="bower_components/gsap/src/uncompressed/TweenMax.js"></script>
     <script src="bower_components/ScrollMagic/js/jquery.scrollmagic.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
+
+    <script src="scripts/playground.js"></script>
     <!-- endbuild -->
-
-
-    <script>
-      // controller = new ScrollMagic({
-      //       container: "#container",
-      //       globalSceneOptions: {
-      //         triggerHook: "onLeave"
-      //       }
-      //     });
-
-      var $ovini = $(".ovini");
-      var $light = $(".ovini .light");
-      var $addLogo = $(".add-logo");
-      var $eventDateLocal = $(".event-date-local");
-      var $rockets = $(".header-ovini .rockets");
-
-
-      var tl = new TimelineMax({delay:0.5, repeat:0, onComplete:oviniFloat});
-
-      var tlRocket = new TimelineMax({delay:0.5, repeat:0, onComplete:oviniFloat});
-
-      tlRocket.to($rockets, 2, {top: 200, right: 150,  ease: Power3.easeInOut}, "+=3.5");
-      tl.set($ovini, {top:-80, opacity:0.5});
-      tl.to($ovini, 1, {top: 130, opacity:1, ease: Power3.easeInOut});
-      tl.to($light, 1, {opacity: 1});
-      tl.to($addLogo, 1, {opacity: 1, top: 350, width: "182px", marginLeft: "-91px", ease: Power3.easeInOut});
-      tl.to($eventDateLocal, 1, {opacity: 1});
-
-
-
-
-      function  oviniFloat() {
-        var $ovini = $(".ovini");
-        var $registerHeader = $(".register-header");
-        var $light = $(".ovini .light");
-
-        var tlOvini = new TimelineMax({delay:0, repeat:500, repeatDelay:0});
-        var tlRegister = new TimelineMax({delay:0, repeat:500, repeatDelay:0});
-        var tlLight = new TimelineMax({delay:0, repeat:500, repeatDelay:0});
-        tlOvini.to($ovini, 1, {top: 125, ease: Power3.easeInOut});
-        tlOvini.to($ovini, 1, {top: 130, ease: Power3.easeInOut});
-
-        tlRegister.to($registerHeader, 0.5, {opacity: 1});
-        tlRegister.to($registerHeader, 0.5, {opacity: 0.8});
-
-        tlLight.to($light, 2.5, {opacity: 0.8});
-        tlLight.to($light, 2.5, {opacity: 1});
-
-
-
-      }
-
-
-    </script>
-
 
 </body>
 </html>

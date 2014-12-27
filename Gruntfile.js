@@ -164,6 +164,7 @@ module.exports = function (grunt) {
     wiredep: {
       app: {
         src: ['<%= yeoman.app %>/index.html'],
+        exclude: ['bower_components/pushy/css/pushy.css' ],
         ignorePath:  /\.\.\//
       },
       sass: {
