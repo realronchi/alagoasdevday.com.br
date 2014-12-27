@@ -1,5 +1,6 @@
 .sponsors {
-
+  position: relative;
+  z-index: 300;
 }
 .sponsors-wrapper {
   @include outer-container;

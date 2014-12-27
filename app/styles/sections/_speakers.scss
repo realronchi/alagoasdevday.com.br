@@ -1,5 +1,7 @@
 .speakers {
   padding-top: 50px;
+  position: relative;
+  z-index: 300;
 }
 .speakers-wrapper {
   @include outer-container;

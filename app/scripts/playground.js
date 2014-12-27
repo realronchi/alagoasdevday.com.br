@@ -124,3 +124,32 @@ function Circle() {
     tlLight.to($light, 2.5, {opacity: 0.8});
     tlLight.to($light, 2.5, {opacity: 1});
   }
+
+
+
+
+
+
+
+// Paralax SCroll Magic
+
+// init controller
+var controller = new ScrollMagic();
+
+// scene #home
+new ScrollScene({triggerElement: "#home"})
+        .setTween(TweenMax.from("#for-whom div.cloud", 1, {top: "-3%", ease: Linear.easeNone}))
+        .addTo(controller);
+// scene #organizers
+new ScrollScene({triggerElement: "#organizers"})
+        .setTween(TweenMax.from("#organizers div.top-cloud", 1, {top: "-8%", ease: Linear.easeNone}))
+        .addTo(controller);
+
+// scene #scheduler
+new ScrollScene({triggerElement: "#schedule"})
+        .setTween(TweenMax.from("#schedule div.top-cloud", 1, {top: "-8%", ease: Linear.easeNone}))
+        .addTo(controller);
+// scene #location
+new ScrollScene({triggerElement: "#location"})
+        .setTween(TweenMax.from("#schedule div.bottom-cloud", 1, {bottom: "-2%", ease: Linear.easeNone}))
+        .addTo(controller);

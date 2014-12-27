@@ -2,6 +2,12 @@
 .for-whom {
   position: relative;
   padding-top: 50px;
+  position: relative;
+  z-index: 300;
+  .section-title {
+    position: relative;
+    z-index: 301;
+  }
 }
 .for-whom .cloud {
   background: url('../images/cloud.png') center top repeat-x;
