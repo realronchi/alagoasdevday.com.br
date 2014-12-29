@@ -2,9 +2,9 @@
   .section-title {
     color: #ffffff;
   }
-  background: #0c1123;
-  padding-top: 230px;
-  padding-bottom: 230px;
+  background: #0c1123 url('../images/stars-section.jpg') center top;
+  padding-top: 290px;
+  padding-bottom: 290px;
   position: relative;
   .top-cloud {
     background: url('../images/top-clouds.png') center top repeat-x;
@@ -27,3 +27,255 @@
 .schedule-wrapper {
   @include outer-container;
 }
+
+
+#cd-timeline {
+  padding-top: 80px;
+}
+.cd-timeline-wrapper {
+  width: 100%;
+  @include clearfix();
+}
+
+
+
+
+
+
+
+
+
+.cd-timeline-block {
+  width: calc(50% + 1px);
+  float: right;
+  position: relative;
+  height: 200px;
+  border-left: #1abc9c 2px solid;
+  .cd-timeline-content {
+    background: #1abc9c;
+    border-radius: 50px;
+    position: absolute;
+    width: 85%;
+    top: 20%;
+    left: 100px;
+    z-index: 400;
+    padding: 20px 20px 20px 150px;
+    h2 {
+      font-size: 13px;
+      color: #2a3d51;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    p {
+      font-size: 18px;
+      font-weight: 300;
+      color: #ffffff;
+      line-height: 19px;
+    }
+  }
+  .cd-timeline-img {
+    position: absolute;
+    top: 50%;
+    margin-top: -78px;
+    z-index: 500;
+    left: 10px;
+  }
+  .cd-timeline-circle {
+    width: 30px;
+    height: 31px;
+    background: url('../images/speakers-elipse-icon.png') no-repeat center;
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    margin-top: -15px;
+  }
+  .cd-timeline-time {
+    color: #fff;
+    position: absolute;
+    left: -90px;
+    font-size: 18px;
+    top: 50%;
+    margin-top: -12px;
+  }
+}
+
+
+.cd-timeline-wrapper:nth-child(even) .cd-timeline-block {
+  float: left;
+  border-right: #1abc9c 2px solid;
+  border-left: none;
+  .cd-timeline-content {
+    right: 100px;
+    left: auto;
+    padding: 20px 150px 20px 20px ;
+    text-align: right;
+  }
+  .cd-timeline-img {
+    right: 10px;
+    left: auto;
+  }
+  .cd-timeline-circle {
+    right: -17px;
+    left: auto;
+  }
+  .cd-timeline-time{
+    right: -90px;
+    left: auto;
+  }
+}
+
+
+
+
+
+// Custom
+.cd-timeline-block-custom {
+  width: calc(50% + 1px);
+  float: right;
+  position: relative;
+  height: 100px;
+  border-left: #1abc9c 2px solid;
+  // background: red;
+  .cd-timeline-circle {
+    width: 30px;
+    height: 31px;
+    background: url('../images/speakers-elipse-icon.png') no-repeat center;
+    position: absolute;
+    left: -15px;
+    top: 0;
+    margin-top: -15px;
+  }
+  .cd-timeline-time {
+    color: #fff;
+    position: absolute;
+    left: -90px;
+    font-size: 18px;
+    top: -12px;
+    margin-top: 0;
+  }
+}
+
+.cd-timeline-block-custom .cd-timeline-content {
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  position: absolute;
+  width: 95%;
+  top: -45px;
+  left: 35px;
+  z-index: 400;
+  padding: 34px 20px 34px 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+
+
+
+.cd-timeline-wrapper .cd-timeline-block-custom.event-end {
+  .cd-timeline-circle {
+    top: auto;
+    bottom: -10px;
+  }
+  .cd-timeline-time {
+    top: auto;
+    margin-top: 0;
+    bottom: -8px;
+  }
+  .cd-timeline-content {
+    top: auto;
+    bottom: -45px;
+  }
+}
+
+.cd-timeline-wrapper:nth-child(even) .cd-timeline-block-custom.event-end {
+  float: left;
+  border: none;
+  border-right: 2px solid #1abc9c;
+  .cd-timeline-circle {
+    top: auto;
+    right: -16px;
+    left: auto;
+    bottom: -10px;
+  }
+  .cd-timeline-time {
+    top: auto;
+    margin-top: 0;
+    bottom: -8px;
+    left: auto;
+    right: -90px;
+  }
+  .cd-timeline-content {
+    top: auto;
+    bottom: -45px;
+    left: auto;
+    right: 35px;
+  }
+}
+
+
+
+
+
+// Interval
+.interval {
+  .cd-timeline-block {
+    .cd-timeline-content {
+      background: none;
+      border: 2px solid #fff;
+      border-radius: 50px;
+      position: absolute;
+      width: 90%;
+      // top: -45px;
+      left: 55px;
+      z-index: 400;
+      padding: 45px 20px 45px 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    .cd-timeline-img {
+      margin-top: -24px;
+      left: 36px;
+    }
+  }
+}
+.interval.lt {
+  .cd-timeline-content  {
+    border: 2px solid #f0c514;
+  }
+}
+
+.cd-timeline-wrapper.interval:nth-child(even) .cd-timeline-block {
+  .cd-timeline-content {
+    background: none;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    position: absolute;
+    width: 90%;
+    // top: -45px;
+    left: auto;
+    right: 55px;
+    z-index: 400;
+    padding: 45px 20px 45px 20px;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .cd-timeline-img {
+    margin-top: -24px;
+    left: auto;
+    right: 36px;
+  }
+}
+
+
+

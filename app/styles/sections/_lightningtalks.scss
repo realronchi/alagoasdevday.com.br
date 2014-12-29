@@ -1,0 +1,15 @@
+.lightningtalks {
+  background: #0c1123 url('../images/stars-section.jpg') center top;
+  color: #fff;
+  // padding-top: 290px;
+  padding-bottom: 290px;
+  position: relative;
+  .bottom-cloud {
+    background: url('../images/bottom-clouds.png') center top repeat-x;
+    position: absolute;
+    height: 201px;
+    width: 100%;
+    bottom: 0px;
+    left: 0;
+  }
+}

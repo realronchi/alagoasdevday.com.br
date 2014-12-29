@@ -137,17 +137,17 @@ function Circle() {
 var controller = new ScrollMagic();
 
 // scene #home
-new ScrollScene({triggerElement: "#home"})
-        .setTween(TweenMax.from("#for-whom div.cloud", 1, {top: "-3%", ease: Linear.easeNone}))
-        .addTo(controller);
+// new ScrollScene({triggerElement: "#home"})
+//         .setTween(TweenMax.from("#for-whom div.cloud", 1, {top: "-3%", ease: Linear.easeNone}))
+//         .addTo(controller);
 // scene #organizers
 new ScrollScene({triggerElement: "#organizers"})
-        .setTween(TweenMax.from("#organizers div.top-cloud", 1, {top: "-8%", ease: Linear.easeNone}))
+        .setTween(TweenMax.from("#organizers div.top-cloud", 1, {top: "-2%", ease: Linear.easeNone}))
         .addTo(controller);
 
 // scene #scheduler
 new ScrollScene({triggerElement: "#schedule"})
-        .setTween(TweenMax.from("#schedule div.top-cloud", 1, {top: "-8%", ease: Linear.easeNone}))
+        .setTween(TweenMax.from("#schedule div.top-cloud", 1, {top: "-2%", ease: Linear.easeNone}))
         .addTo(controller);
 // scene #location
 new ScrollScene({triggerElement: "#location"})
