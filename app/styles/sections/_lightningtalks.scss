@@ -2,7 +2,7 @@
   background: #0c1123 url('../images/stars-section.jpg') center top;
   color: #fff;
   // padding-top: 290px;
-  padding-bottom: 290px;
+  padding-bottom: 90px;
   position: relative;
   .bottom-cloud {
     background: url('../images/bottom-clouds.png') center top repeat-x;
@@ -11,5 +11,63 @@
     width: 100%;
     bottom: 0px;
     left: 0;
+    z-index: 200;
+  }
+}
+
+
+
+.moon-wrapper {
+  position: relative;
+  // background: red;
+  .moon-content {
+    @include outer-container;
+    // background: red;
+    padding: 200px 0 0 0;
+    position: relative;
+    z-index: 400;
+    color: #000;
+  }
+  .moon-overlay-bg {
+    min-width: em(1088);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: em(-544);
+    // background: green;
+    padding: 122px 0;
+  }
+  .moon {
+    min-height: 1616px;
+    background: url('../images/moon.png') center top no-repeat;
+    z-index: 102;
+    position: relative;
+    width: 100%;
+  }
+  .earth {
+    background: url('../images/earth.png') center no-repeat;
+    width: 383px;
+    height: 382px;
+    position: absolute;
+    right: -200px;
+    top: 0;
+    z-index: 90;
+  }
+  .rocket {
+    background: url('../images/moon-rocket.png') center no-repeat;
+    width: 122px;
+    height: 123px;
+    position: absolute;
+    right: 100px;
+    top: -170px;
+    z-index: 101;
+  }
+  .astronaut {
+    background: url('../images/astronaut.png') center no-repeat;
+    width: 185px;
+    height: 293px;
+    position: absolute;
+    left: 10px;
+    top: -150px;
   }
 }
