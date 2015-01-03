@@ -23,7 +23,7 @@
   .moon-content {
     @include outer-container;
     // background: red;
-    padding: 200px 0 0 0;
+    padding: 326px 0 0 0;
     position: relative;
     z-index: 400;
     color: #000;
@@ -70,4 +70,83 @@
     left: 10px;
     top: -150px;
   }
+}
+
+
+.lt-description {
+  @include span-columns(6);
+  @include shift(3);
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.lt-list {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  li {
+    @include span-columns(4);
+    @include omega(3n);
+    background: url('../images/bg-lt.png') center no-repeat;
+    background-size: 100%;
+    height: 367px;
+    padding-top: 140px;
+    position: relative;
+    h3 {
+      text-align: center;
+      font-size: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    p {
+      padding: 0 20px;
+      font-size: 14px;
+      line-height: 22px;
+      text-align: center;
+    }
+    .lt-picture {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      width: 231px;
+      height: 154;
+      margin-left: -115px;
+      img {
+        width: 100%;
+      }
+    }
+    .label {
+      background: url('../images/label.png') no-repeat;
+      background-size: 100%;
+      width: 94%;
+      height: 60px;
+      position: absolute;
+      left: 3%;
+      bottom: 40px;
+      line-height: 65px;
+      text-align: center;
+      a {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+    &.confirmed {
+      .label {
+        left: 2%;
+        background: url('../images/label-confirmed.png') no-repeat;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+.lt-obs {
+  @include span-columns(8);
+  @include shift(2);
+  font-size: 13px;
+  padding-top: 96px;
 }
