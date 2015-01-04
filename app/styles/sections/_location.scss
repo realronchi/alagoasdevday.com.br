@@ -4,8 +4,6 @@
 }
 
 .location-wrapper {
-  // @include outer-container;
-
 }
 
 .location-box {
@@ -26,4 +24,60 @@
 .contact-box {
   min-width: 587px;
   float: right;
+  .logo-contato {
+    padding-top: 94px;
+  }
+  .address {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 300;
+    color: #2c3e50;
+    padding-top: 20px;
+    text-transform: uppercase;
+    img {
+      float: left;
+      margin-right: 20px;
+      margin-top: 4px;
+
+    }
+  }
+  h3 {
+    color: #2c3e50;
+    font-size: 35px;
+    font-weight: 300;
+    border-top: #fff 1px solid;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    margin-right: 100px;
+    margin-top: 80px;
+    padding-top: 50px;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+  }
+  .outside-description {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 15px;
+    padding-bottom: 20px;
+  }
+
+  .hotel-list {
+    li {
+      background: url('../images/small-pin.png') no-repeat center left;
+      padding: 8px 0 8px 30px;
+      a {
+        color: #2c3e50;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: bold;
+        .money {
+          background: url('../images/money.png') no-repeat center;
+          width: 21px;
+          height: 20px;
+          display: inline-block;
+        }
+      }
+    }
+  }
 }
+
