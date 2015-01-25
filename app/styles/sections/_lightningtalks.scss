@@ -1,7 +1,6 @@
 .lightningtalks {
   background: #0c1123 url('../images/stars-section.jpg') center top;
   color: #fff;
-  // padding-top: 290px;
   padding-bottom: 90px;
   position: relative;
   .bottom-cloud {
@@ -15,14 +14,10 @@
   }
 }
 
-
-
 .moon-wrapper {
   position: relative;
-  // background: red;
   .moon-content {
     @include outer-container;
-    // background: red;
     padding: 326px 0 0 0;
     position: relative;
     z-index: 400;
@@ -34,7 +29,6 @@
     top: 0;
     left: 50%;
     margin-left: em(-480);
-    // background: green;
     padding: 122px 0;
   }
   .moon {
