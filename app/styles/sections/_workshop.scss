@@ -1,6 +1,76 @@
 .workshop {
-
+  background: url('../images/workshop_bg.jpg') repeat-x bottom center;
+  margin-bottom: 90px;
 }
 .workshop-wrapper {
   @include outer-container;
+}
+
+
+.content-workshop-presenter {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 110px;
+  width: 464px;
+  .float-circle {
+    position: absolute;
+    background: url('../images/circle-workshop.png');
+    width: 690px;
+    height: 303px;
+    left: -85px;
+    top: 155px;
+  }
+}
+
+
+
+.workshop-info {
+  text-align: center;
+  h3 {
+    text-align: center;
+    padding: 0;
+    margin: 30px 0 0 0;
+    font-size: 37px;
+    font-weight: 300;
+    color: #2c3e50;
+  }
+  span {
+    text-transform: uppercase;
+    color: #1abc9c;
+    font-size: 13px;
+    font-weight: bold;
+  }
+}
+
+
+.workshop-subscription {
+  margin-top: 28px;
+  ul {
+    li {
+      width: 50%;
+      float: left;
+      a {
+        color: #fff;
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 8px 0;
+      }
+      &:first-child {
+        background: #f2c600;
+
+
+        a {
+
+        }
+      }
+      &:last-child {
+        background: #1abc9c;
+        a {
+
+        }
+      }
+
+    }
+  }
 }

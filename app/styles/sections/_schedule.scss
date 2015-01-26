@@ -286,7 +286,7 @@
 }
 .cd-timeline-img.bounce-in {
   visibility: visible;
-  animation: cd-bounce-1 1.0s;
+  animation: cd-bounce-1 1.5s;
 }
 
 .cd-timeline-content.is-hidden {
@@ -294,7 +294,7 @@
 }
 .cd-timeline-content.bounce-in {
   visibility: visible;
-  animation: cd-bounce-1 1.0s;
+  animation: cd-bounce-1 1.5s;
 }
 
 .cd-timeline-time.is-hidden {
@@ -302,7 +302,7 @@
 }
 .cd-timeline-time.bounce-in {
   visibility: visible;
-  animation: cd-bounce-1 1.0s;
+  animation: cd-bounce-1 1.5s;
 }
 
 
@@ -314,7 +314,7 @@
 
   60% {
     opacity: 1;
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 
   100% {
