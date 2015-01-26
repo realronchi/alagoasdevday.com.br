@@ -15,7 +15,7 @@
     @include span-columns(6);
     background: #172838;
     @include omega(2n);
-    width: calc(50%-1px);
+    @include calc(width, "50% - 1px");
 
     @include media($mobile) {
       @include span-columns(4);
