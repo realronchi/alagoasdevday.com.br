@@ -29,7 +29,8 @@ module.exports = function (grunt) {
 
     'gh-pages': {
       options: {
-        base: 'dist'
+        base: 'dist',
+        message: 'Auto-generated commit: gh-pages release'
       },
       src: ['**']
     },
@@ -347,6 +348,7 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             '*.html',
+            'CNAME',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
             'fonts/{,*/}*.*'
