@@ -1,10 +1,13 @@
+.organizers-wrapper {
+  @include outer-container;
+}
 .organizers {
   .section-title {
     color: #ffffff;
   }
   background: #0c1123;
-  padding-top: 230px;
-  padding-bottom: 230px;
+  padding-top: 283px;
+  padding-bottom: 130px;
   position: relative;
   .top-cloud {
     background: url('../images/top-clouds.png') center top repeat-x;
@@ -15,6 +18,87 @@
     left: 0;
   }
 }
-.organizers-wrapper {
-  @include outer-container;
+
+.organizers-list {
+  margin-top: 110px;
+
+  li {
+    @include span-columns(3);
+    @include omega(5n);
+    width: 18.1%;
+    background: #f5f2ef;
+    position: relative;
+    padding-bottom: 20px;
+
+    .name {
+      font-size: 30px;
+      color: #2c3e50;
+      padding: 10px 20px 0;
+      display: inline-block;
+      line-height: 35px;
+      margin-bottom: 10px;
+      font-weight: 300;
+    }
+    .job {
+      font-weight: 400;
+      font-size: 13px;
+      padding: 0 20px;
+      text-transform: uppercase;
+      color: #1abc9c;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .social-links {
+      position: relative;
+      height: 43px;
+      width: 70%;
+      margin: 0 auto;      
+      li {
+        width: 43px;
+        height: 43px;
+        float: left;
+        background: #1abc9c;
+        margin-right: 4px;
+        @include omega(3n);
+        a {
+          text-indent: -9000px;
+          display: block;
+          height: 43px;
+          width: 43px;
+        }
+        &.twitter {
+          background: #1abc9c url('../images/icon-social-micro-twitter.png') no-repeat center;
+        }
+        &.facebook {
+          background: #1abc9c url('../images/icon-social-micro-facebook.png') no-repeat center;
+        }
+        &.linkedin {
+          background: #1abc9c url('../images/icon-social-micro-linkedin.png') no-repeat center;
+        }
+      }
+    }
+  }
+}
+
+.organizers-contact-info {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  top: 60px;
+  position: relative;
+  color: $white;
+  h2 {
+    color: $white;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: #f2c600;
+    font-size: 14px;
+    text-transform: uppercase;    
+  }
 }
