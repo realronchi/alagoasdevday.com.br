@@ -2,13 +2,24 @@
   @include outer-container;
 }
 .organizers {
-  .section-title {
-    color: #ffffff;
-  }
-  background: #0c1123;
+  background: #0c1123 url('../images/bg-organizers.jpg') center top no-repeat;
   padding-top: 283px;
   padding-bottom: 130px;
   position: relative;
+
+  .satelite {
+    background: transparent url('../images/satelite.png') right top no-repeat;
+    width: 214px;
+    height: 171px;
+    position: absolute;
+    right: 50px;
+    top: 200px;
+    display: block;
+  }
+
+  .section-title {
+    color: #ffffff;
+  }
   .top-cloud {
     background: url('../images/top-clouds.png') center top repeat-x;
     position: absolute;
