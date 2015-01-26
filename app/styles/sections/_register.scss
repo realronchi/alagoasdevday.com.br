@@ -4,3 +4,66 @@
 .register-wrapper {
   @include outer-container;
 }
+
+
+.register-price-list {
+  margin-top: 110px;
+  li {
+    @include span-columns(4);
+    @include omega(3n);
+    background: #f5f2ef;
+    text-align: center;
+    &.disabled {
+      opacity: 0.3;
+    }
+    .price {
+      font-size: 35px;
+      color: #2c3e50;
+      text-align: center;
+      border-bottom: #1abc9c 1px solid;
+      padding: 20px 80px;
+      display: inline-block;
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+    .valid {
+      text-transform: uppercase;
+      color: #1abc9c;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+  }
+}
+
+.register-header-box {
+  background: #1abc9c;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+
+  .ending {
+    background: #e84b3d;
+    display: inline-block;
+    float: right;
+    padding: 0 20px;
+  }
+}
+
+.register-now {
+  background: #1abc9c;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  height: 45px;
+  line-height: 45px;
+  margin-bottom: 110px;
+}
