@@ -33,7 +33,7 @@
 .organizers-list {
   margin-top: 110px;
 
-  li {
+  >li {
     @include span-columns(3);
     @include omega(5n);
     width: 18.1%;
@@ -65,28 +65,8 @@
       height: 43px;
       width: 70%;
       margin: 0 auto;      
-      li {
-        width: 43px;
-        height: 43px;
-        float: left;
-        background: #1abc9c;
-        margin-right: 4px;
+      >li {
         @include omega(3n);
-        a {
-          text-indent: -9000px;
-          display: block;
-          height: 43px;
-          width: 43px;
-        }
-        &.twitter {
-          background: #1abc9c url('../images/icon-social-micro-twitter.png') no-repeat center;
-        }
-        &.facebook {
-          background: #1abc9c url('../images/icon-social-micro-facebook.png') no-repeat center;
-        }
-        &.linkedin {
-          background: #1abc9c url('../images/icon-social-micro-linkedin.png') no-repeat center;
-        }
       }
     }
   }

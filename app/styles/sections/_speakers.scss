@@ -7,7 +7,6 @@
   @include outer-container;
 }
 
-
 .speaker-list {
   @include row();
   @include fill-parent();
@@ -75,32 +74,6 @@
         position: absolute;
         top: 180px;
         left: 12px;
-        li {
-          width: 43px;
-          height: 43px;
-          float: left;
-          background: #1abc9c;
-          margin-right: 4px;
-          a {
-            text-indent: -9000px;
-            display: block;
-            height: 100%;
-            width: 100%;
-          }
-          &.keynote {
-            background: #f2c600 url('../images/icon-social-micro-slideshare.png') center no-repeat;
-            width: 102px;
-          }
-          &.twitter {
-            background: #1abc9c url('../images/icon-social-micro-twitter.png') no-repeat center;
-          }
-          &.facebook {
-            background: #1abc9c url('../images/icon-social-micro-facebook.png') no-repeat center;
-          }
-          &.linkedin {
-            background: #1abc9c url('../images/icon-social-micro-linkedin.png') no-repeat center;
-          }
-        }
       }
     }
 
@@ -109,8 +82,6 @@
         opacity: 1;
       }
     }
-
-
 
   }
   .speaker-item:nth-child(1n) {
