@@ -22,14 +22,12 @@
   }
 }
 
-
-
 .workshop-info {
   text-align: center;
   h3 {
     text-align: center;
     padding: 0;
-    margin: 30px 0 0 0;
+    margin: 30px 0 10px 0;
     font-size: 37px;
     font-weight: 300;
     color: #2c3e50;
@@ -44,8 +42,8 @@
 
 
 .workshop-subscription {
-  margin-top: 28px;
-  ul {
+  margin-top: 33px;
+  >ul {
     li {
       width: 50%;
       float: left;
@@ -54,23 +52,15 @@
         display: block;
         text-align: center;
         text-transform: uppercase;
-        padding: 8px 0;
+        padding: 13px 0;
+        font-weight: 700;
       }
       &:first-child {
-        background: #f2c600;
-
-
-        a {
-
-        }
+        @include btn-hover(#f2c600,#2c3e50);
       }
       &:last-child {
-        background: #1abc9c;
-        a {
-
-        }
+        @include btn-hover(#1abc9c,#2c3e50);
       }
-
     }
   }
 }

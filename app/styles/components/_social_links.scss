@@ -11,17 +11,22 @@
           width: 100%;
         }
         &.keynote {
-          background: #f2c600 url('../images/icon-social-micro-slideshare.png') center no-repeat;
+          background: url('../images/icon-social-micro-slideshare.png') center no-repeat;
+          @include btn-hover(#f2c600,#e98325);
           width: 102px;
         }
         &.twitter {
-          background: #1abc9c url('../images/icon-social-micro-twitter.png') no-repeat center;
+          background: url('../images/icon-social-micro-twitter.png') no-repeat center;
+          @include btn-hover(#1abc9c,#00acee);
         }
         &.facebook {
-          background: #1abc9c url('../images/icon-social-micro-facebook.png') no-repeat center;
+          background: url('../images/icon-social-micro-facebook.png') no-repeat center;
+          @include btn-hover(#1abc9c,#3b5998);
         }
         &.linkedin {
-          background: #1abc9c url('../images/icon-social-micro-linkedin.png') no-repeat center;
+          background: url('../images/icon-social-micro-linkedin.png') no-repeat center;
+          @include btn-hover(#1abc9c,#0077b5);
         }
       }
     }
+    

@@ -21,24 +21,26 @@
       color: #2c3e50;
       text-align: center;
       border-bottom: #1abc9c 1px solid;
-      padding: 20px 80px;
+      padding: 40px 80px;
       display: inline-block;
       margin-bottom: 20px;
       font-weight: 300;
+      letter-spacing: 11px;
     }
     .valid {
       text-transform: uppercase;
       color: #1abc9c;
       margin-bottom: 20px;
       display: inline-block;
+      font-weight: 700;
     }
   }
 }
 
 .register-header-box {
   background: #1abc9c;
-  height: 45px;
-  line-height: 45px;
+  height: 52px;
+  line-height: 52px;
   text-align: center;
   color: #fff;
   text-transform: uppercase;
@@ -46,6 +48,7 @@
   font-weight: bold;
 
   .ending {
+    height: 52px;
     background: #e84b3d;
     display: inline-block;
     float: right;
@@ -63,7 +66,7 @@
   width: 100%;
   text-align: center;
   margin-top: 30px;
-  height: 45px;
-  line-height: 45px;
+  height: 52px;
+  line-height: 52px;
   margin-bottom: 110px;
 }
