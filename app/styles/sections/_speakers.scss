@@ -7,6 +7,8 @@
   // @include outer-container;
   padding: 0 2%;
   max-width: 1480px;
+  position: relative;
+  margin: 0 auto;
 }
 
 .speaker-list {
@@ -70,7 +72,7 @@
         line-height: 19px;
         display: block;
         padding-top: 6px;
-        letter-spacing: 1px;
+        // letter-spacing: 1px;
       }
 
       .social-links {
