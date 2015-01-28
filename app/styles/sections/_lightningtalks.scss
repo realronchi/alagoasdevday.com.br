@@ -24,7 +24,7 @@
     color: #000;
   }
   .moon-overlay-bg {
-    min-width: em(960);
+    min-width: 1024px;
     position: absolute;
     top: -54px;
     left: 50%;
@@ -45,7 +45,7 @@
     width: 383px;
     height: 382px;
     position: absolute;
-    right: -200px;
+    right: 0;
     top: 0;
     z-index: 90;
   }
