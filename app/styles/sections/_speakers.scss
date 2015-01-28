@@ -4,7 +4,8 @@
   z-index: 300;
 }
 .speakers-wrapper {
-  @include outer-container;
+  // @include outer-container;
+  padding: 0 2%;
 }
 
 .speaker-list {
@@ -16,6 +17,7 @@
     background: #172838;
     @include omega(2n);
     @include calc(width, "50% - 1px");
+    min-width: 540px;
 
     @include media($mobile) {
       @include span-columns(4);
@@ -64,10 +66,10 @@
       }
       .speaker-description {
         font-size: 12px;
-        font-weight: 300;
-        line-height: 14px;
+        line-height: 19px;
         display: block;
         padding-top: 6px;
+        letter-spacing: 1px;
       }
 
       .social-links {
