@@ -52,7 +52,7 @@
   border-left: #1abc9c 2px solid;
   .cd-timeline-content {
     background: #1abc9c;
-    border-radius: 50px;
+    border-radius: 100px;
     position: absolute;
     width: 85%;
     top: 20%;
@@ -76,7 +76,7 @@
   .cd-timeline-img {
     position: absolute;
     top: 50%;
-    margin-top: -78px;
+    margin-top: -72px;
     z-index: 500;
     left: 10px;
   }
@@ -158,22 +158,19 @@
 .cd-timeline-block-custom .cd-timeline-content {
   background: none;
   border: 2px solid #fff;
-  border-radius: 50px;
+  border-radius: 100px;
   position: absolute;
   width: 95%;
   top: -45px;
   left: 35px;
   z-index: 400;
-  padding: 34px 20px 34px 20px;
+  padding: 52px 20px;
   text-align: center;
   font-size: 13px;
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
 }
-
-
-
 
 .cd-timeline-wrapper .cd-timeline-block-custom.event-end {
   .cd-timeline-circle {
@@ -226,13 +223,13 @@
     .cd-timeline-content {
       background: none;
       border: 2px solid #fff;
-      border-radius: 50px;
+      border-radius: 100px;
       position: absolute;
       width: 90%;
       // top: -45px;
       left: 55px;
       z-index: 400;
-      padding: 45px 20px 45px 20px;
+      padding: 45px 20px;
       text-align: center;
       font-size: 13px;
       color: #fff;
@@ -245,7 +242,7 @@
     }
   }
 }
-.interval.lt {
+.interval .lt {
   .cd-timeline-content  {
     border: 2px solid #f0c514;
   }
@@ -255,14 +252,14 @@
   .cd-timeline-content {
     background: none;
     border: 2px solid #fff;
-    border-radius: 50px;
+    border-radius: 100px;
     position: absolute;
     width: 90%;
     // top: -45px;
     left: auto;
     right: 55px;
     z-index: 400;
-    padding: 45px 20px 45px 20px;
+    padding: 45px 20px;
     text-align: center;
     font-size: 13px;
     color: #fff;
