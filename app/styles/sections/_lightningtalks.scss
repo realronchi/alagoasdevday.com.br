@@ -140,10 +140,103 @@
     }
   }
 }
+
 .lt-obs {
   @include span-columns(12);
   font-size: 13px;
   padding-top: 0;
   margin-top: 90px;
   text-align: center;
+}
+
+
+.btn-lt {
+  background-color:  #1ABC9C;
+  line-height: 50px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  width: 329px;
+  height: 55px;
+  position: relative;
+  z-index: 6;
+  transition: all 500ms;
+  top: 6px;
+  left: 8px;
+  text-transform: uppercase;
+  color: $white;
+  font-weight: bold;
+
+  a {
+    text-transform: uppercase;
+    color: $white;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  &::after,&::before{
+    content:" ";
+    width: 0;
+    height: 0;
+    position: absolute;
+  }
+  &::after{
+    top: -5px;
+    right: -0px;
+    border-top: 5px solid transparent;
+    border-left: 15px solid #17A286;
+    border-bottom: 0px solid transparent;
+    transition: all 500ms;
+
+    // top: -18px;
+    // right: -2px;
+    // border-top: 15px solid transparent;
+    // border-left: 15px solid #17A286;
+    // border-bottom: 8px solid transparent;
+    // border-right: 0px solid transparent;
+    // transition: all 500ms;
+    // transform: rotate(27deg);
+  }
+
+  &::before{
+    top: -5px;
+    left: -0px;
+    border-top: 5px solid transparent;
+    border-right: 15px solid #17A286;
+    border-bottom: 0px solid transparent;
+    transition: all 500ms;
+
+
+    // top: -18px;
+    // left: -2px;
+    // border-top: 15px solid transparent;
+    // border-right: 15px solid #17A286;
+    // border-bottom: 8px solid transparent;
+    // border-left: 0px solid transparent;
+    // transition: all 500ms;
+    // transform: rotate(-29deg);
+  }
+
+  &:hover {
+    background-color: #F2C600;
+    &::after{
+       border-left: 15px solid #DDB607;
+    }
+    &::before{
+      border-right: 15px solid #DDB607;
+    }
+  }
+}
+
+.confirmed {
+  .btn-lt {
+    background-color: #F2C600;
+    &::after{
+       border-left: 15px solid #DDB607;
+    }
+    &::before{
+      border-right: 15px solid #DDB607;
+    }
+
+  }
 }
