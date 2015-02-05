@@ -124,7 +124,7 @@ $(document).ready(function(){
 
   var tlRocket = new TimelineMax({delay:0.5, repeat:0, onComplete:oviniFloat});
 
-  tlRocket.to($rockets, 2, {top: 200, right: 150,  ease: Power3.easeInOut}, "+=3.5");
+  tlRocket.to($rockets, 5, {top: -300, right: -150,  ease: Power3.easeInOut}, "+=3.5");
 
 
 
