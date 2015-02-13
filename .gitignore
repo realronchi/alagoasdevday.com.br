@@ -6,4 +6,4 @@ bower_components
 *.sublime-*
 .grunt
 .dropbox
-Iconr
+package.json
