@@ -7,6 +7,14 @@
         position: relative;
         z-index: 301;
     }
+
+    .section-title, .for-whom-list {
+        @include media($mobile) {
+            @include span-columns(4);
+            display: none;
+        }
+    }
+
 }
 .for-whom .cloud {
     background: url('../images/cloud.png') center top repeat-x;
@@ -27,7 +35,11 @@
     li {
         width: 20%;
         float: left;
-        @include media($mobile) {
+        @include media($medium-screen-up) {
+            @include span-columns(6);
+            @include omega(2n);
+        }
+        @include media($medium-screen-up) {
             @include span-columns(4);
         }
         .persona {
@@ -219,3 +231,6 @@
         }
     }
 }
+
+
+
