@@ -1,146 +1,236 @@
 .for-whom {
-  position: relative;
-  padding-top: 50px;
-  position: relative;
-  z-index: 300;
-  .section-title {
     position: relative;
-    z-index: 301;
-  }
+    padding-top: 50px;
+    position: relative;
+    z-index: 300;
+    .section-title {
+        position: relative;
+        z-index: 301;
+    }
+
+    .section-title, .for-whom-list {
+        @include media($mobile) {
+            @include span-columns(4);
+            display: none;
+        }
+    }
+
 }
 .for-whom .cloud {
-  background: url('../images/cloud.png') center top repeat-x;
-  position: absolute;
-  height: 190px;
-  width: 100%;
-  top: -140px;
-  left: 0;
-  z-index: 300;
+    background: url('../images/cloud.png') center top repeat-x;
+    position: absolute;
+    height: 190px;
+    width: 100%;
+    top: -140px;
+    left: 0;
+    z-index: 300;
 }
-
 .for-whon-wrapper {
-  @include outer-container;
+    @include outer-container;
 }
-
 .for-whom-list {
-  margin-top: 95px;
-  margin-bottom: 50px;
-  @include row();
-  li {
-    width: 20%;
-    float: left;
-    @include media($mobile) {
-      @include span-columns(4);
-    }
-    .persona {
-      text-align: center;
-      display: block;
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 45px;
-      text-transform: uppercase;
-
-    }
-    .description {
-      text-align: center;
-      font-size: 14px;
-      line-height: 19px;
-      padding: 0 20px;
-    }
-    img {
-      margin-bottom: 34px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      position: relative;
-
-        &:hover {
-          -webkit-animation: gravitation 3s infinite ease-in-out; /* Safari 4+ */
-          -moz-animation:    gravitation 3s infinite ease-in-out; /* Fx 5+ */
-          -o-animation:      gravitation 3s infinite ease-in-out; /* Opera 12+ */
-          animation:         gravitation 3s infinite ease-in-out; /* IE 10+, Fx 29+ */
-        
-        @-webkit-keyframes gravitation {
-          0% {
-          -webkit-transform:translateY(0); /* prefixo para browsers webkit */
-          -moz-transform:translateY(0); /* prefixo para browsers gecko */
-          -o-transform:translateY(0); /* prefixo para opera */
-          transform:translateY(0);
-          }
-          50% {
-          -webkit-transform:translateY(5px); /* prefixo para browsers webkit */
-          -moz-transform:translateY(5px); /* prefixo para browsers gecko */
-          -o-transform:translateY(5px); /* prefixo para opera */
-          transform:translateY(5px);
-          }
-          100% {
-           -webkit-transform:translateY(0); /* prefixo para browsers webkit */
-          -moz-transform:translateY(0); /* prefixo para browsers gecko */
-          -o-transform:translateY(0); /* prefixo para opera */
-          transform:translateY(0);
-          }
+    margin-top: 95px;
+    margin-bottom: 50px;
+    @include row();
+    li {
+        width: 20%;
+        float: left;
+        @include media($medium-screen-up) {
+            @include span-columns(6);
+            @include omega(2n);
         }
-        @-moz-keyframes gravitation {
-          0%   {
-          -webkit-transform:translateY(0); /* prefixo para browsers webkit */
-          -moz-transform:translateY(0); /* prefixo para browsers gecko */
-          -o-transform:translateY(0); /* prefixo para opera */
-          transform:translateY(0);
-          }
-          50% {
-          -webkit-transform:translateY(5px); /* prefixo para browsers webkit */
-          -moz-transform:translateY(5px); /* prefixo para browsers gecko */
-          -o-transform:translateY(5px); /* prefixo para opera */
-          transform:translateY(5px);
-          }
-          100% {
-           -webkit-transform:translateY(0); /* prefixo para browsers webkit */
-          -moz-transform:translateY(0); /* prefixo para browsers gecko */
-          -o-transform:translateY(0); /* prefixo para opera */
-          transform:translateY(0);
-          }
+        @include media($medium-screen-up) {
+            @include span-columns(4);
         }
-        @-o-keyframes gravitation {
-          0%   {
-          -webkit-transform:translateY(0); /* prefixo para browsers webkit */
-          -moz-transform:translateY(0); /* prefixo para browsers gecko */
-          -o-transform:translateY(0); /* prefixo para opera */
-          transform:translateY(0);
-          }
-          50% {
-          -webkit-transform:translateY(5px); /* prefixo para browsers webkit */
-          -moz-transform:translateY(5px); /* prefixo para browsers gecko */
-          -o-transform:translateY(5px); /* prefixo para opera */
-          transform:translateY(5px);
-          }
-          100% {
-           -webkit-transform:translateY(0); /* prefixo para browsers webkit */
-          -moz-transform:translateY(0); /* prefixo para browsers gecko */
-          -o-transform:translateY(0); /* prefixo para opera */
-          transform:translateY(0);
-          }
+        .persona {
+            text-align: center;
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 45px;
+            text-transform: uppercase;
         }
-        @keyframes gravitation {
-          0%   {
-          -webkit-transform:translateY(0); /* prefixo para browsers webkit */
-          -moz-transform:translateY(0); /* prefixo para browsers gecko */
-          -o-transform:translateY(0); /* prefixo para opera */
-          transform:translateY(0);
-          }
-          50% {
-          -webkit-transform:translateY(5px); /* prefixo para browsers webkit */
-          -moz-transform:translateY(5px); /* prefixo para browsers gecko */
-          -o-transform:translateY(5px); /* prefixo para opera */
-          transform:translateY(5px);
-          }
-          100% {
-           -webkit-transform:translateY(0); /* prefixo para browsers webkit */
-          -moz-transform:translateY(0); /* prefixo para browsers gecko */
-          -o-transform:translateY(0); /* prefixo para opera */
-          transform:translateY(0);
-          }
+        .description {
+            text-align: center;
+            font-size: 14px;
+            line-height: 19px;
+            padding: 0 20px;
         }
-      }
+        img {
+            margin-bottom: 34px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            &:hover {
+                -webkit-animation: gravitation 3s infinite ease-in-out;
+                /* Safari 4+ */
+                
+                -moz-animation: gravitation 3s infinite ease-in-out;
+                /* Fx 5+ */
+                
+                -o-animation: gravitation 3s infinite ease-in-out;
+                /* Opera 12+ */
+                
+                animation: gravitation 3s infinite ease-in-out;
+                /* IE 10+, Fx 29+ */
+                
+                @-webkit-keyframes gravitation {
+                    0% {
+                        -webkit-transform: translateY(0);
+                        /* prefixo para browsers webkit */
+                        
+                        -moz-transform: translateY(0);
+                        /* prefixo para browsers gecko */
+                        
+                        -o-transform: translateY(0);
+                        /* prefixo para opera */
+                        
+                        transform: translateY(0);
+                    }
+                    50% {
+                        -webkit-transform: translateY(5px);
+                        /* prefixo para browsers webkit */
+                        
+                        -moz-transform: translateY(5px);
+                        /* prefixo para browsers gecko */
+                        
+                        -o-transform: translateY(5px);
+                        /* prefixo para opera */
+                        
+                        transform: translateY(5px);
+                    }
+                    100% {
+                        -webkit-transform: translateY(0);
+                        /* prefixo para browsers webkit */
+                        
+                        -moz-transform: translateY(0);
+                        /* prefixo para browsers gecko */
+                        
+                        -o-transform: translateY(0);
+                        /* prefixo para opera */
+                        
+                        transform: translateY(0);
+                    }
+                }
+                @-moz-keyframes gravitation {
+                    0% {
+                        -webkit-transform: translateY(0);
+                        /* prefixo para browsers webkit */
+                        
+                        -moz-transform: translateY(0);
+                        /* prefixo para browsers gecko */
+                        
+                        -o-transform: translateY(0);
+                        /* prefixo para opera */
+                        
+                        transform: translateY(0);
+                    }
+                    50% {
+                        -webkit-transform: translateY(5px);
+                        /* prefixo para browsers webkit */
+                        
+                        -moz-transform: translateY(5px);
+                        /* prefixo para browsers gecko */
+                        
+                        -o-transform: translateY(5px);
+                        /* prefixo para opera */
+                        
+                        transform: translateY(5px);
+                    }
+                    100% {
+                        -webkit-transform: translateY(0);
+                        /* prefixo para browsers webkit */
+                        
+                        -moz-transform: translateY(0);
+                        /* prefixo para browsers gecko */
+                        
+                        -o-transform: translateY(0);
+                        /* prefixo para opera */
+                        
+                        transform: translateY(0);
+                    }
+                }
+                @-o-keyframes gravitation {
+                    0% {
+                        -webkit-transform: translateY(0);
+                        /* prefixo para browsers webkit */
+                        
+                        -moz-transform: translateY(0);
+                        /* prefixo para browsers gecko */
+                        
+                        -o-transform: translateY(0);
+                        /* prefixo para opera */
+                        
+                        transform: translateY(0);
+                    }
+                    50% {
+                        -webkit-transform: translateY(5px);
+                        /* prefixo para browsers webkit */
+                        
+                        -moz-transform: translateY(5px);
+                        /* prefixo para browsers gecko */
+                        
+                        -o-transform: translateY(5px);
+                        /* prefixo para opera */
+                        
+                        transform: translateY(5px);
+                    }
+                    100% {
+                        -webkit-transform: translateY(0);
+                        /* prefixo para browsers webkit */
+                        
+                        -moz-transform: translateY(0);
+                        /* prefixo para browsers gecko */
+                        
+                        -o-transform: translateY(0);
+                        /* prefixo para opera */
+                        
+                        transform: translateY(0);
+                    }
+                }
+                @keyframes gravitation {
+                    0% {
+                        -webkit-transform: translateY(0);
+                        /* prefixo para browsers webkit */
+                        
+                        -moz-transform: translateY(0);
+                        /* prefixo para browsers gecko */
+                        
+                        -o-transform: translateY(0);
+                        /* prefixo para opera */
+                        
+                        transform: translateY(0);
+                    }
+                    50% {
+                        -webkit-transform: translateY(5px);
+                        /* prefixo para browsers webkit */
+                        
+                        -moz-transform: translateY(5px);
+                        /* prefixo para browsers gecko */
+                        
+                        -o-transform: translateY(5px);
+                        /* prefixo para opera */
+                        
+                        transform: translateY(5px);
+                    }
+                    100% {
+                        -webkit-transform: translateY(0);
+                        /* prefixo para browsers webkit */
+                        
+                        -moz-transform: translateY(0);
+                        /* prefixo para browsers gecko */
+                        
+                        -o-transform: translateY(0);
+                        /* prefixo para opera */
+                        
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
     }
-  }
 }
+
+
+
