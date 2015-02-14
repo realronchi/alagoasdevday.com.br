@@ -127,8 +127,8 @@ $(document).ready(function(){
   var tlRocket = new TimelineMax({delay:1.5, repeat:50, onComplete:oviniFloat});
 
   tlRocket.to($rocket1, 3, {top: -1000, left: 750,  ease: Power3.easeInOut}, "+=1.0");
-  tlRocket.to($rocket2, 2, {top: -1000, left: 750,  ease: Power3.easeInOut}, "+=1.0");
-  tlRocket.to($rocket3, 2, {top: -1000, left: 750,  ease: Power3.easeInOut}, "+=1.0");
+  tlRocket.to($rocket2, 3, {top: -1000, left: 750,  ease: Power3.easeInOut}, "+=1.0");
+  tlRocket.to($rocket3, 3, {top: -1000, left: 750,  ease: Power3.easeInOut}, "+=1.0");
 
 
 
