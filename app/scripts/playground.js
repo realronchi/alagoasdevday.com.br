@@ -106,7 +106,9 @@ $(document).ready(function(){
   var $light = $(".ovini .light");
   var $addLogo = $(".add-logo");
   var $eventDateLocal = $(".event-date-local");
-  var $rockets = $(".header-ovini .rockets");
+  var $rocket1 = $(".rocket1");
+  var $rocket2 = $(".rocket2");
+  var $rocket3 = $(".rocket3");
 
 
   // var tl = new TimelineMax({delay:0.5, repeat:0});
@@ -114,7 +116,7 @@ $(document).ready(function(){
 
 
   tl.set($ovini, {top: -80});
-  tl.to($ovini, 3, {top: 130, ease:Back.easeOut});
+  tl.to($ovini, 3, {top: 130});
   tl.to($light, 1, {opacity: 1});
   tl.to($addLogo, 1, {opacity: 1, top: 350, width: "182px", marginLeft: "-91px", ease: Power3.easeInOut});
   tl.to($eventDateLocal, 1, {opacity: 1});
@@ -122,9 +124,11 @@ $(document).ready(function(){
 
 
 
-  var tlRocket = new TimelineMax({delay:0.5, repeat:0, onComplete:oviniFloat});
+  var tlRocket = new TimelineMax({delay:1.5, repeat:50, onComplete:oviniFloat});
 
-  tlRocket.to($rockets, 5, {top: -300, right: -150,  ease: Power3.easeInOut}, "+=3.5");
+  tlRocket.to($rocket1, 3, {top: -1000, left: 750,  ease: Power3.easeInOut}, "+=1.0");
+  tlRocket.to($rocket2, 2, {top: -1000, left: 750,  ease: Power3.easeInOut}, "+=1.0");
+  tlRocket.to($rocket3, 2, {top: -1000, left: 750,  ease: Power3.easeInOut}, "+=1.0");
 
 
 
@@ -138,11 +142,12 @@ $(document).ready(function(){
     var tlOvini = new TimelineMax({delay:0, repeat:500, repeatDelay:0});
     var tlRegister = new TimelineMax({delay:0, repeat:500, repeatDelay:0});
     var tlLight = new TimelineMax({delay:0, repeat:500, repeatDelay:0});
-    tlOvini.to($ovini, 1, {top: 125, ease: Power3.easeInOut});
-    tlOvini.to($ovini, 1, {top: 130, ease: Power3.easeInOut});
 
-    tlRegister.to($registerHeader, 0.5, {opacity: 1});
-    tlRegister.to($registerHeader, 0.5, {opacity: 0.8});
+    tlOvini.to($ovini, 3, {y: 5});
+    tlOvini.to($ovini, 2, {y: -5});
+
+    tlRegister.to($registerHeader, 1.5, {opacity: 1});
+    tlRegister.to($registerHeader, 0.5, {opacity: 0});
 
     tlLight.to($light, 2.5, {opacity: 0.8});
     tlLight.to($light, 2.5, {opacity: 1});
