@@ -1,7 +1,8 @@
 .location {
   position: relative;
   z-index: 300;
-  float: left;
+  clear: both;
+  outline: red solid; //Temp
 }
 
 .location-wrapper {

@@ -1,8 +1,9 @@
 .lightningtalks {
   background: #0c1123 url('../images/stars-section.jpg') center top;
   color: #fff;
-  padding-bottom: 90px;
+  padding-bottom: 290px;
   position: relative;
+  // outline: yellow dotted;
 
 
   @include media($mobile) {
@@ -106,9 +107,10 @@
     @include omega(3n);
     background: url('../images/bg-lt.png') center no-repeat;
     background-size: 100%;
-    height: 367px;
+    height: 390px;
     padding-top: 140px;
     position: relative;
+    // outline: yellow dotted;
 
     @include media($mobile) {
         @include span-columns(5);
@@ -174,11 +176,11 @@
   text-transform: uppercase;
   color: $white;
   font-weight: bold;
-  @include media($mobile) {
-    top: -10px;
-    left: 12px;
-    width: 305px;
-  }
+  // @include media($mobile) {
+  //   top: -10px;
+  //   left: 12px;
+  //   width: 305px;
+  // }
 
   a {
     text-transform: uppercase;
@@ -240,6 +242,177 @@
     }
   }
 }
+
+// Media Queries
+
+
+@include iphone3 {
+
+  .section-title {
+    color: $white !important;
+  }
+
+  .lt-list {
+    li {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      h3 {
+        margin-bottom: 8px;
+        margin-top: 0;
+      }
+      p {
+        padding: 0 35px;
+        font-size: 12px;
+        line-height: 18px;
+        height: 72px;
+        overflow: hidden;
+        // outline: red solid;
+      }
+    }
+  }
+
+  .btn-lt {
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@include iphone4 {
+
+  .section-title {
+    color: $white !important;
+  }
+
+  .lt-list {
+    li {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      h3 {
+        margin-bottom: 8px;
+        margin-top: 0;
+      }
+      p {
+        padding: 0 35px;
+        font-size: 12px;
+        line-height: 18px;
+        height: 72px;
+        overflow: hidden;
+        // outline: red solid;
+      }
+    }
+  }
+
+  .btn-lt {
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@include iphone5 {
+
+  .section-title {
+    color: $white !important;
+  }
+
+  .lt-list {
+    li {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      h3 {
+        margin-bottom: 8px;
+        margin-top: 0;
+      }
+      p {
+        padding: 0 35px;
+        font-size: 12px;
+        line-height: 18px;
+        height: 72px;
+        overflow: hidden;
+        // outline: red solid;
+      }
+    }
+  }
+
+  .btn-lt {
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@include iphone6 {
+
+  .section-title {
+    color: $white !important;
+  }
+
+  .lt-list {
+    li {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      h3 {
+        margin-bottom: 8px;
+        margin-top: 0;
+      }
+      p {
+        padding: 0 35px;
+        font-size: 15px;
+        overflow: hidden;
+        // outline: red solid;
+
+        line-height: 19px;
+        height: 74px;
+      }
+    }
+  }
+
+  .btn-lt {
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@include iphone6-plus {
+
+  .section-title {
+    color: $white !important;
+  }
+
+  .lt-list {
+    li {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      h3 {
+        margin-bottom: 8px;
+        margin-top: 0;
+      }
+      p {
+        padding: 0 35px;
+        font-size: 15px;
+        overflow: hidden;
+        // outline: red solid;
+
+        line-height: 19px;
+        height: 74px;
+      }
+    }
+  }
+
+  .btn-lt {
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
 
 .confirmed {
   .btn-lt {
