@@ -2,7 +2,7 @@
   position: relative;
   z-index: 300;
   clear: both;
-  outline: red solid; //Temp
+  // outline: red solid; //Temp
 }
 
 .location-wrapper {
@@ -81,3 +81,65 @@
     }
   }
 }
+
+
+  @include media($medium-screen-up) {
+      // @include span-columns(4);
+      .contact-info {
+        width: 100%;
+        // float: left;
+      }
+      .map {
+        // width: 50%;
+        // float: left;
+        display: none;
+      }
+
+      .contact-box {
+        width: 90%;
+        // outline: blue solid;
+        margin: 0 auto;
+        min-width: 300px;
+        float: none;
+        text-align: center;
+
+        .logo-contato {
+          padding-top: 50px;
+        }
+
+        .address {
+           // text-align: left;
+            img {
+              float: none;
+              margin: 0 auto;
+              display: block;
+              padding-bottom: 20px;
+           }
+         }
+
+         h3 {
+          font-size: 21px;
+          padding-top: 30px;
+          margin: 30px auto;
+          width: 70%;
+         }
+
+         .hotel-list {
+          text-align: left;
+          margin-left: 8%;
+
+          li {
+            a {
+              font-size: 13px;
+              vertical-align: top;
+            }
+          }
+         }
+
+          .outside-description {
+            width: 80%;
+            margin: 0 auto 20px;
+          }
+
+      }
+  }
