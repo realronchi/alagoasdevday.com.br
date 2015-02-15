@@ -41,6 +41,7 @@
     position: relative;
     padding-bottom: 20px;
 
+
     .name {
       font-size: 28px;
       color: #2c3e50;
@@ -68,6 +69,63 @@
       >li {
         @include omega(3n);
       }
+    }
+
+
+    @include media($medium-screen-up) {
+      // @include span-columns(1);
+      @include omega(3n);
+
+
+      float: left;
+      display: block;
+      margin-right: 5.42297%;
+      margin-bottom: 5.42297%;
+      width: 29.432772%;
+      
+
+    }
+
+
+    @include media($mobile) {
+        @include span-columns(6);
+        margin-bottom: 20px;
+        height: 160px;
+
+        img {
+          float: left;
+          width: 50%;
+          display: inline-block;
+          object-fit: cover;
+          height: 160px;
+        }
+        
+        .name {
+          // background: #ccc;
+          float: right;
+          width: 50%;
+          display: inline-block;
+          font-size: 20px;
+          line-height: 20px;
+          font-weight: 400;
+          margin-bottom: 0;
+          padding: 15px 20px 4px;
+        }
+
+        .job {
+          // background: #999;
+          float: right;
+          width: 50%;
+          display: inline-block;
+          margin-bottom: 0;
+        }
+
+        .social-links {
+          width: 50%;
+          float: left;
+          padding: 22px 0 20px 20px;
+        }
+
     }
   }
 }
