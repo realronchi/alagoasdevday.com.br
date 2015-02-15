@@ -5,11 +5,13 @@
   position: relative;
   // outline: yellow dotted;
 
-
   @include media($mobile) {
       @include span-columns(6);
-      // display: none;
+     .section-title {
+       color: $white !important;
+     }
   }  
+
   .bottom-cloud {
     background: url('../images/bottom-clouds.png') center top repeat-x;
     position: absolute;
@@ -248,9 +250,6 @@
 
 @include iphone3 {
 
-  .section-title {
-    color: $white !important;
-  }
 
   .lt-list {
     li {
@@ -281,9 +280,6 @@
 
 @include iphone4 {
 
-  .section-title {
-    color: $white !important;
-  }
 
   .lt-list {
     li {
@@ -314,9 +310,6 @@
 
 @include iphone5 {
 
-  .section-title {
-    color: $white !important;
-  }
 
   .lt-list {
     li {
@@ -347,9 +340,6 @@
 
 @include iphone6 {
 
-  .section-title {
-    color: $white !important;
-  }
 
   .lt-list {
     li {
@@ -381,9 +371,6 @@
 
 @include iphone6-plus {
 
-  .section-title {
-    color: $white !important;
-  }
 
   .lt-list {
     li {

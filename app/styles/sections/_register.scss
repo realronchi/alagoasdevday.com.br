@@ -16,6 +16,21 @@
     &.disabled {
       opacity: 0.3;
     }
+
+    @include media($mobile) {
+        @include span-columns(6);
+        &.disabled {
+          display: none;
+        }
+    }  
+    
+    @include media($medium-screen-up) {
+        @include span-columns(4);
+        &.disabled {
+          display: none;
+        }
+    }  
+    
     .price {
       font-size: 35px;
       color: #2c3e50;
