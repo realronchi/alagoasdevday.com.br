@@ -87,4 +87,7 @@
   &:hover {
     color: $white;
   }
+  @include media($medium-screen-up) {
+      margin-top: 0;
+  }  
 }
