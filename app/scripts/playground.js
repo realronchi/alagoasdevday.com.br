@@ -1,6 +1,28 @@
 /*global $:false */
 'use strict';
 
+
+function detectmob() {
+ if( navigator.userAgent.match(/Android/i)
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i)
+ ){
+
+    return true;
+  }
+ else {
+    return false;
+  }
+}
+
+
+
+
+
 $(document).ready(function($){
   var timelineBlock = $('.cd-timeline-block, .cd-timeline-block-custom');
   //hide timeline blocks which are outside the viewport
@@ -86,7 +108,7 @@ function Circle() {
 }
 
 $(document).ready(function(){
-
+if (!detectmob()) {
   WIDTH = window.innerWidth;
   HEIGHT = window.innerHeight;
   canvas = document.getElementById('pixie');
@@ -97,6 +119,7 @@ $(document).ready(function(){
     pxs[i].reset();
   }
   setInterval(draw,rint);
+}
 });
 
 
@@ -152,6 +175,7 @@ $(document).ready(function(){
     tlLight.to($light, 2.5, {opacity: 0.8});
     tlLight.to($light, 2.5, {opacity: 1});
   }
+
 
 
 
