@@ -40,6 +40,11 @@
     position: relative;
     height: 200px;
     border-left: #1abc9c 2px solid;
+    @include media($mobile) {
+        width: 100%;
+        border: none;
+        height: 400px;
+    }
     .cd-timeline-content {
         background: #1abc9c;
         border-radius: 100px;
@@ -50,18 +55,29 @@
         z-index: 400;
         padding: 30px 20px 20px 165px;
         height: 134px;
+        @include media($mobile) {
+          width: 98%;
+          left: 0;
+          padding: 40px;
+        }
         h2 {
             font-size: 13px;
             color: #2a3d51;
             text-transform: uppercase;
             font-weight: bold;
             margin-bottom: 10px;
+            @include media($mobile) {
+              text-align: center;
+            }
         }
         p {
             font-size: 18px;
             font-weight: 400;
             color: #ffffff;
             line-height: 19px;
+            @include media($mobile) {
+              text-align: center;
+            }
         }
     }
     .cd-timeline-img {
@@ -70,6 +86,10 @@
         margin-top: -72px;
         z-index: 500;
         left: 40px;
+        @include media($mobile) {
+          left: 100px;
+          top: 20px;
+        }
     }
     .cd-timeline-circle {
         width: 30px;
@@ -79,6 +99,9 @@
         left: -15px;
         top: 50%;
         margin-top: -15px;
+        @include media($mobile) {
+          display: none;
+        }
     }
     .cd-timeline-time {
         color: #fff;
@@ -87,23 +110,40 @@
         font-size: 18px;
         top: 50%;
         margin-top: -12px;
+        @include media($mobile) {
+          left: 42%;
+          top: -90px;
+        }
     }
 }
-// Left Side 
+// Left Side
 .cd-timeline-wrapper:nth-child(even) .cd-timeline-block {
     float: left;
     border-right: #1abc9c 2px solid;
     border-left: none;
+     @include media($mobile) {
+        width: 100%;
+        border: none;
+        height: 400px;
+    }
     .cd-timeline-content {
         right: 100px;
         left: auto;
         padding: 30px 165px 20px 20px;
         text-align: right;
         height: 134px;
+        @include media($mobile) {
+          width: 98%;
+          left: 0;
+          padding: 40px;
+        }
     }
     .cd-timeline-img {
         right: 70px;
         left: auto;
+        @include media($mobile) {
+          right: 110px;
+        }
     }
     .cd-timeline-circle {
         right: -17px;
@@ -112,6 +152,10 @@
     .cd-timeline-time {
         right: -90px;
         left: auto;
+        @include media($mobile) {
+          left: 42%;
+          top: -90px;
+        }
     }
 }
 // Custom
@@ -121,6 +165,11 @@
     position: relative;
     height: 100px;
     border-left: #1abc9c 2px solid;
+    @include media($mobile) {
+      width: 100%;
+      border: none;
+      height: 300px;
+    }
     .cd-timeline-circle {
         width: 30px;
         height: 31px;
@@ -129,6 +178,9 @@
         left: -15px;
         top: 0;
         margin-top: -15px;
+        @include media($mobile) {
+          display: none;
+        }
     }
     .cd-timeline-time {
         color: #fff;
@@ -137,6 +189,11 @@
         font-size: 18px;
         top: -12px;
         margin-top: 0;
+        @include media($mobile) {
+          left: 42%;
+          top: -90px;
+        }
+
     }
 }
 .cd-timeline-block-custom .cd-timeline-content {
@@ -154,6 +211,10 @@
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
+    @include media($mobile) {
+      width: 98%;
+      left: 0;
+    }
 }
 .cd-timeline-wrapper .cd-timeline-block-custom.event-end {
     .cd-timeline-circle {
@@ -174,6 +235,10 @@
     float: left;
     border: none;
     border-right: 2px solid #1abc9c;
+    @include media($mobile) {
+      border: none;
+    }
+
     .cd-timeline-circle {
         top: auto;
         right: -16px;
@@ -186,12 +251,21 @@
         bottom: -8px;
         left: auto;
         right: -90px;
+        @include media($mobile) {
+          left: 42%;
+          top: 80px;
+        }
+
     }
     .cd-timeline-content {
         top: auto;
         bottom: -45px;
         left: auto;
         right: 35px;
+        @include media($mobile) {
+          width: 98%;
+          left: 0;
+        }
     }
 }
 // Interval
@@ -211,10 +285,24 @@
             color: #fff;
             text-transform: uppercase;
             font-weight: bold;
+            @include media($mobile) {
+                width: 100%;
+                left: 0;
+            }
         }
         .cd-timeline-img {
             margin-top: -24px;
             left: 36px;
+            @include media($mobile) {
+              left: 43%;
+              margin-top: 30px;
+            }
+        }
+        .cd-timeline-time {
+            @include media($mobile) {
+              left: 42%;
+              top: 20px;
+            }
         }
     }
 }
@@ -234,12 +322,26 @@
         color: #fff;
         text-transform: uppercase;
         font-weight: bold;
+        @include media($mobile) {
+          width: 100%;
+          left: 0;
+        }
     }
     .cd-timeline-img {
         margin-top: -24px;
         left: auto;
         right: 36px;
+        @include media($mobile) {
+          left: 43%;
+          margin-top: 30px;
+        }
     }
+    .cd-timeline-time {
+            @include media($mobile) {
+              left: 42%;
+              top: 20px;
+            }
+        }
 }
 // Custom Lighting Talks
 .lt .cd-timeline-block .cd-timeline-content, .cd-timeline-wrapper.lt:nth-child(even) .cd-timeline-block .cd-timeline-content {
