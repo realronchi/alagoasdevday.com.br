@@ -9,6 +9,10 @@
   max-width: 1480px;
   position: relative;
   margin: 0 auto;
+  @include media($mobile) {
+    padding: 0;
+    margin: 0 15px;
+  }
 }
 
 .speaker-list {
@@ -20,12 +24,17 @@
     background-color: #172838;
     @include omega(2n);
     @include calc(width, "50% - 1px");
-    min-width: 540px;
+    // min-width: 540px;
     position: relative;
 
     @include media($mobile) {
-      @include span-columns(4);
+      min-width: 100%;
     }
+    @include media($medium-screen-up) {
+      // min-width: inherit;
+    }
+
+
 
     .speaker-profile-picture {
       width: 50%;
@@ -35,9 +44,12 @@
       position: relative;
       @include media($mobile) {
         @include span-columns(4);
+        margin: 0;
+        width: 100%;
       }
       &>img {
         display: block;
+        width: 100%;
       }
       .hover-profile-picture {
         position: absolute;
@@ -83,8 +95,15 @@
 
       .social-links {
         position: absolute;
-        top: 180px;
+        top: 210px;
         left: 25px;
+        @include ipad() {
+          top: 174px;
+        }
+        @include media($mobile) {
+          position: static;
+          margin: 20px 0;
+        }
         li {
           &.keynote {
             display: none; // Habilitar quando finalizar o evento.

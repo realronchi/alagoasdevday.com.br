@@ -1,6 +1,7 @@
 .workshop {
   background: url('../images/workshop_bg.jpg') repeat-x bottom center;
   margin-bottom: 90px;
+  display: none;
 }
 .workshop-wrapper {
   @include outer-container;

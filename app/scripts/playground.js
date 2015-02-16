@@ -65,8 +65,8 @@ $(document).ready(function($){
     var tlRegister = new TimelineMax({delay:0, repeat:500, repeatDelay:0});
     var tlLight = new TimelineMax({delay:0, repeat:500, repeatDelay:0});
 
-    tlOvini.to($ovini, 3, {y: 5});
-    tlOvini.to($ovini, 2, {y: -5});
+    // tlOvini.to($ovini, 3, {y: 5});
+    // tlOvini.to($ovini, 2, {y: -5});
 
     tlRegister.to($registerHeader, 1.5, {opacity: 1});
     tlRegister.to($registerHeader, 0.5, {opacity: 0});
