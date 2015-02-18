@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" ng-app="alagoasdevdaycombrApp">
   <head>
     <meta charset="utf-8">
     <title>Alagoas Dev Day 2015</title>
@@ -37,7 +37,7 @@
     <!-- endbuild -->
 
   </head>
-  <body ng-app="alagoasdevdaycombrApp">
+  <body ng-controller="MainCtrl">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -149,6 +149,34 @@
           <h2 class="section-title">Palestrantes</h2>
 
           <ul class="speaker-list">
+
+            <li class="speaker-item" ng-repeat="speaker in speakerResults.speakers">
+              <div class="speaker-profile-picture">
+                <div class="hover-profile-picture" style="background-image: url('{{speaker.images.company.original}}');"></div>
+                <img src="{{speaker.images.speaker.original}}" alt="">
+              </div>
+              <div class="speaker-profile-informations">
+                  <span class="speaker-name">{{speaker.name}}</span>
+                  <span class="speaker-job">{{speaker.company_name}}</span>
+                  <span class="speaker-description">
+                    {{speaker.bio}}
+                  </span>
+                  <ul class="social-links">
+                      <li class="twitter">
+                          <a href="{{speaker.twitter_url}}" target="_blank">Twitter</a>
+                      </li>
+                      <li class="facebook">
+                          <a href="{{speaker.facebook_url}}" target="_blank">Facebook</a>
+                      </li>
+                      <li class="linkedin">
+                          <a href="{{speaker.linkedin_url}}" target="_blank">LinkedIn</a>
+                      </li>
+                      <li class="keynote">
+                          <a href="{{speaker.speakerdeck_url}}" target="_blank">Keynote</a>
+                      </li>
+                  </ul>
+              </div>
+            </li>
 
             <li class="speaker-item">
 
