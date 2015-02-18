@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" ng-app="alagoasdevdaycombrApp">
+<html class="no-js">
   <head>
     <meta charset="utf-8">
     <title>Alagoas Dev Day 2015</title>
@@ -37,7 +37,7 @@
     <!-- endbuild -->
 
   </head>
-  <body ng-controller="MainCtrl">
+  <body ng-app="alagoasdevdaycombrApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -148,7 +148,7 @@
         <div class="speakers-wrapper">
           <h2 class="section-title">Palestrantes</h2>
 
-          <ul class="speaker-list">
+          <ul class="speaker-list" ng-controller="SpeakersCtrl">
 
             <li class="speaker-item" ng-repeat="speaker in speakerResults.speakers">
               <div class="speaker-profile-picture">
@@ -603,7 +603,7 @@
 
 
       <section class="sponsors" id="sponsors">
-        <div class="sponsors-wrapper">
+        <div class="sponsors-wrapper" ng-controller="SponsorsCtrl">
           <h2 class="section-title">Quem faz acontecer</h2>
 
           <div class="sponsor-category category-{{category.name.toLowerCase()}}" ng-if="category.sponsors.length > 0" ng-repeat="category in sponsorResults.sponsor_categories">
