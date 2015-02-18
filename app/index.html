@@ -162,16 +162,16 @@
                     {{speaker.bio}}
                   </span>
                   <ul class="social-links">
-                      <li class="twitter">
+                      <li class="twitter" ng-if="speaker.twitter_url != ''">
                           <a href="{{speaker.twitter_url}}" target="_blank">Twitter</a>
                       </li>
-                      <li class="facebook">
+                      <li class="facebook" ng-if="speaker.facebook_url != ''">
                           <a href="{{speaker.facebook_url}}" target="_blank">Facebook</a>
                       </li>
-                      <li class="linkedin">
+                      <li class="linkedin" ng-if="speaker.linkedin_url != ''">
                           <a href="{{speaker.linkedin_url}}" target="_blank">LinkedIn</a>
                       </li>
-                      <li class="keynote">
+                      <li class="keynote" ng-if="speaker.speakerdeck_url != ''">
                           <a href="{{speaker.speakerdeck_url}}" target="_blank">Keynote</a>
                       </li>
                   </ul>
@@ -606,7 +606,7 @@
         <div class="sponsors-wrapper">
           <h2 class="section-title">Quem faz acontecer</h2>
 
-          <div class="sponsor-category category-{{category.name.toLowerCase()}}" ng-repeat="category in sponsorResults.sponsor_categories">
+          <div class="sponsor-category category-{{category.name.toLowerCase()}}" ng-if="category.sponsors.length > 0" ng-repeat="category in sponsorResults.sponsor_categories">
             <h2 class="title">{{category.name}}</h2>
             <a href="{{sponsor.url}}" ng-repeat="sponsor in category.sponsors">
               <img src="{{sponsor.images.original}}" alt="{{sponsor.name}}">
