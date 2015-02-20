@@ -7,7 +7,12 @@
  * # MainCtrl
  * Controller of the alagoasdevdaycombrApp
  */
-var app = angular.module('alagoasdevdaycombrApp', ['ngResource']);
+var app = angular.module('alagoasdevdaycombrApp', ['ngResource']).run(function($rootScope){
+  $rootScope.parameterize = function($string){
+    return $string.toLowerCase().replace(/[^a-zA-Z0-9]+/gi, '-');
+  };
+});
+
 var baseURL = 'http://admin.alagoasdevday.com.br/api/v1/:action';
 
 app.controller('MainCtrl', function () {
@@ -86,4 +91,3 @@ app.controller('SchedulesCtrl', function ($scope, $resource) {
   );
   $scope.scheduleResults = $scope.schedules.get();
 });
-
