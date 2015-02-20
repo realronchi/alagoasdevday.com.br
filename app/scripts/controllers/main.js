@@ -62,3 +62,28 @@ app.controller('SponsorsCtrl', function ($scope, $resource) {
   $scope.sponsorResults = $scope.sponsors.get();
 });
 
+/**
+ * @ngdoc function
+ * @name alagoasdevdaycombrApp.controller:SchedulesCtrl
+ * @description
+ * # SchedulesCtrl
+ * Controller of the alagoasdevdaycombrApp
+ */
+app.controller('SchedulesCtrl', function ($scope, $resource) {
+
+  // get schedules
+  $scope.schedules = $resource(
+    baseURL,
+    {
+      action: 'schedules.json',
+      callback: 'JSON_CALLBACK'
+    },
+    {
+      get: {
+        method: 'JSONP'
+      }
+    }
+  );
+  $scope.scheduleResults = $scope.schedules.get();
+});
+

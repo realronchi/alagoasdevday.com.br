@@ -182,252 +182,42 @@
 
       </section>
 
-      <section class="schedule" id="schedule">
+      <section class="schedule" id="schedule" ng-controller="SchedulesCtrl">
         <div class="schedule-wrapper">
           <h2 class="section-title">Programação</h2>
 
           <div id="cd-timeline">
-            <div class="cd-timeline-wrapper">
-              <div class="cd-timeline-block-custom">
-                <div class="cd-timeline-circle">
-                </div>
+
+            <div class="cd-timeline-wrapper {{scheduleResults.schedules.indexOf(schedule) > 0 && schedule.speaker == null ? 'interval' : ''}}" ng-repeat="schedule in scheduleResults.schedules">
+              <div class="{{scheduleResults.schedules.indexOf(schedule) > 0 ? 'cd-timeline-block' : 'cd-timeline-block-custom'}}{{scheduleResults.schedules.indexOf(schedule) == scheduleResults.schedules.length - 1 ? '-custom event-end' : ''}}" ng-if="schedule.speaker == null">
+                <div class="cd-timeline-circle"></div>
                 <div class="cd-timeline-time">
-                  08h00
+                  {{ schedule.time }}
                 </div>
                 <div class="cd-timeline-img">
-                  <!-- <img src="images/trash/speaker.png" alt=""> -->
+                  <img src="images/icon-timeline-{{scheduleResults.schedules.indexOf(schedule)}}.png" alt="" ng-if="scheduleResults.schedules.indexOf(schedule) > 0">
                 </div> <!-- cd-timeline-img -->
                 <div class="cd-timeline-content">
-                  Credenciamento
+                  {{ schedule.title }}
                 </div> <!-- cd-timeline-content -->
               </div> <!-- cd-timeline-block -->
-            </div>
-
-            <div class="cd-timeline-wrapper">
-              <div class="cd-timeline-block">
-                <div class="cd-timeline-circle">
-                </div>
+              <div class="cd-timeline-block" ng-if="schedule.speaker != null">
+                <div class="cd-timeline-circle"></div>
                 <div class="cd-timeline-time">
-                  09h00
+                  {{ schedule.time }}
                 </div>
-
                 <div class="cd-timeline-img schedule-speaker">
                   <div class="schedule-speaker-img">
-                    <img src="images/trash/darth-vader.png" alt="">
+                    <img src="{{ schedule.speaker.images.speaker.original }}" alt="">
                   </div>
                 </div>
 
                 <div class="cd-timeline-content">
-                  <h2>Darth Vader</h2>
-                  <p>Em breve</p>
+                  <h2>{{ schedule.speaker.name }}</h2>
+                  <p>{{ schedule.speaker.theme }}</p>
                 </div> <!-- cd-timeline-content -->
               </div> <!-- cd-timeline-block -->
             </div>
-
-            <div class="cd-timeline-wrapper">
-              <div class="cd-timeline-block">
-                <div class="cd-timeline-circle">
-                </div>
-                <div class="cd-timeline-time">
-                  10h00
-                </div>
-
-                <div class="cd-timeline-img schedule-speaker">
-                  <div class="schedule-speaker-img">
-                    <img src="images/trash/darth-vader.png" alt="">
-                  </div>
-                </div>
-
-                <div class="cd-timeline-content">
-                  <h2>Darth Vader</h2>
-                  <p>Em breve</p>
-                </div> <!-- cd-timeline-content -->
-              </div> <!-- cd-timeline-block -->
-            </div>
-
-
-
-            <div class="cd-timeline-wrapper">
-              <div class="cd-timeline-block">
-                <div class="cd-timeline-circle">
-                </div>
-                <div class="cd-timeline-time">
-                  11h00
-                </div>
-
-                <div class="cd-timeline-img schedule-speaker">
-                  <div class="schedule-speaker-img">
-                    <img src="images/trash/marcio-trindade.jpg" alt="">
-                  </div>
-                </div>
-
-
-                <div class="cd-timeline-content">
-                  <h2>Marcio Trindade</h2>
-                  <p>Em breve</p>
-                </div> <!-- cd-timeline-content -->
-              </div> <!-- cd-timeline-block -->
-            </div>
-
-
-            <div class="cd-timeline-wrapper interval">
-              <div class="cd-timeline-block">
-                <div class="cd-timeline-circle">
-                </div>
-                <div class="cd-timeline-time">
-                  12h00
-                </div>
-                <div class="cd-timeline-img">
-                  <img src="images/icon-timeline-food.png" alt="">
-                </div> <!-- cd-timeline-img -->
-
-                <div class="cd-timeline-content">
-                  Hora do Almoço
-                </div> <!-- cd-timeline-content -->
-              </div> <!-- cd-timeline-block -->
-            </div>
-
-<!-- ########### Break ############ -->
-
-            <div class="cd-timeline-wrapper interval lt">
-              <div class="cd-timeline-block">
-                <div class="cd-timeline-circle">
-                </div>
-                <div class="cd-timeline-time">
-                  13h00
-                </div>
-                <div class="cd-timeline-img">
-                  <img src="images/icon-timeline-yellow.png" alt="">
-                </div> <!-- cd-timeline-img -->
-
-                <div class="cd-timeline-content">
-                  LIGHTNING TALKS
-                </div> <!-- cd-timeline-content -->
-              </div> <!-- cd-timeline-block -->
-            </div>
-
-
-            <div class="cd-timeline-wrapper">
-              <div class="cd-timeline-block">
-                <div class="cd-timeline-circle">
-                </div>
-                <div class="cd-timeline-time">
-                  14h00
-                </div>
-
-                <div class="cd-timeline-img schedule-speaker">
-                  <div class="schedule-speaker-img">
-                    <img src="images/trash/elton-minetto.jpg" alt="">
-                  </div>
-                </div>
-
-                <div class="cd-timeline-content">
-                  <h2>Elton Minetto</h2>
-                  <p>Em breve</p>
-                </div> <!-- cd-timeline-content -->
-              </div> <!-- cd-timeline-block -->
-            </div>
-
-            <div class="cd-timeline-wrapper">
-              <div class="cd-timeline-block">
-                <div class="cd-timeline-circle">
-                </div>
-                <div class="cd-timeline-time">
-                  15h00
-                </div>
-
-                <div class="cd-timeline-img schedule-speaker">
-                  <div class="schedule-speaker-img">
-                    <img src="images/trash/darth-vader.png" alt="">
-                  </div>
-                </div>
-
-
-                <div class="cd-timeline-content">
-                  <h2>Luke Skywalker</h2>
-                  <p>Em breve</p>
-                </div> <!-- cd-timeline-content -->
-              </div> <!-- cd-timeline-block -->
-            </div>
-
-
-
-            <div class="cd-timeline-wrapper interval">
-              <div class="cd-timeline-block">
-                <div class="cd-timeline-circle">
-                </div>
-                <div class="cd-timeline-time">
-                  16h00
-                </div>
-                <div class="cd-timeline-img">
-                  <img src="images/icon-timeline-ballon.png" alt="">
-                </div> <!-- cd-timeline-img -->
-
-                <div class="cd-timeline-content">
-                  Intervalo
-                </div> <!-- cd-timeline-content -->
-              </div> <!-- cd-timeline-block -->
-            </div>
-
-
-            <div class="cd-timeline-wrapper">
-              <div class="cd-timeline-block">
-                <div class="cd-timeline-circle">
-                </div>
-                <div class="cd-timeline-time">
-                  16h30
-                </div>
-
-                <div class="cd-timeline-img schedule-speaker">
-                  <div class="schedule-speaker-img">
-                    <img src="images/trash/darth-vader.png" alt="">
-                  </div>
-                </div>
-
-                <div class="cd-timeline-content">
-                  <h2>Luke Skywalker</h2>
-                  <p>Em breve</p>
-                </div> <!-- cd-timeline-content -->
-              </div> <!-- cd-timeline-block -->
-            </div>
-
-            <div class="cd-timeline-wrapper">
-              <div class="cd-timeline-block">
-                <div class="cd-timeline-circle">
-                </div>
-                <div class="cd-timeline-time">
-                  17h30
-                </div>
-
-                <div class="cd-timeline-img schedule-speaker">
-                  <div class="schedule-speaker-img">
-                    <img src="images/trash/luis-cipriani.jpg" alt="">
-                  </div>
-                </div>
-
-                <div class="cd-timeline-content">
-                  <h2>Luis Cipriani</h2>
-                  <p>Em breve</p>
-                </div> <!-- cd-timeline-content -->
-              </div> <!-- cd-timeline-block -->
-            </div>
-
-            <div class="cd-timeline-wrapper">
-              <div class="cd-timeline-block-custom event-end">
-                <div class="cd-timeline-circle">
-                </div>
-                <div class="cd-timeline-time">
-                  18h30
-                </div>
-                <div class="cd-timeline-img">
-                  <!-- <img src="images/trash/speaker.png" alt=""> -->
-                </div> <!-- cd-timeline-img -->
-                <div class="cd-timeline-content">
-                  SORTEIOS, ENCERRAMENTO E FESTA!
-                </div> <!-- cd-timeline-content -->
-              </div> <!-- cd-timeline-block -->
-            </div>
-
           </div>
 
         </div>
