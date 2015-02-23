@@ -349,6 +349,7 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'CNAME',
+            'fb-share.jpg',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
             'fonts/{,*/}*.*'
