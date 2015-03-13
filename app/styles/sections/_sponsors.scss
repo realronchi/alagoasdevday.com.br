@@ -7,13 +7,14 @@
   @include outer-container;
 }
 
+.sponsors-wrapper {
+	border-bottom: 2px solid rgba($light-gray, .5);
+}
+
 .sponsor-category {
 	@include span-columns(4);
-	// @include omega(5n);
-	// width: 100%;
 	margin-right: 0;
 	width: 33.2%;
-	border-bottom: 2px solid rgba($light-gray, .5);
 	display: block;
 	height: auto;
 	margin-bottom: 20px;
@@ -31,9 +32,9 @@
 	a {
 		display: inline-block;
 		margin-top: 10px;
-		&:last-child {
-			border-right: 1px solid rgba($light-gray, .5);
-		}
+		width: 168px;
+		height: 123px;
+		cursor: pointer;
 	}
 
 	&:last-child {
