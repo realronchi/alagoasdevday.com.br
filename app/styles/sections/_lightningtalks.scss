@@ -1,432 +1,478 @@
 .lightningtalks {
-  background: #0c1123 url('../images/stars-section.jpg') center top;
-  color: #fff;
-  padding-bottom: 290px;
-  position: relative;
-  // outline: yellow dotted;
+    position: relative;
 
-  @include media($mobile) {
-      @include span-columns(6);
-     .section-title {
-       color: $white !important;
-     }
-  }  
+    padding-bottom: 290px;
 
-  .bottom-cloud {
-    background: url('../images/bottom-clouds.png') center top repeat-x;
-    position: absolute;
-    height: 201px;
-    width: 100%;
-    bottom: 0px;
-    left: 0;
-    z-index: 200;
-  }
+    color: #fff;
+    background: #0c1123 url("../images/stars-section.jpg") center top;
+    // outline: yellow dotted;
+
+    @include media($mobile) {
+        @include span-columns(6);
+        .section-title {
+            color: $white !important;
+        }
+    }
+
+    .bottom-cloud {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 200;
+
+        width: 100%;
+        height: 201px;
+
+        background: url("../images/bottom-clouds.png") center top repeat-x;
+    }
 }
 
 .moon-wrapper {
-  position: relative;
-  .moon-content {
-    @include outer-container;
-    padding: 326px 0 0 0;
     position: relative;
-    z-index: 400;
-    color: #000;
+    .moon-content {
+        position: relative;
+        z-index: 400;
 
-    @include media($mobile) {
-      // color: $white;
-      padding: 0;
-    }
-  }
-  .moon-overlay-bg {
-    min-width: 1024px;
-    position: absolute;
-    top: -54px;
-    left: 50%;
-    margin-left: em(-480);
-    padding: 122px 0;
-    @include media($mobile) {
-      display: none;
-    }
+        padding: 326px 0 0 0;
 
-  }
-  .moon {
-    min-height: 1616px;
-    background: url('../images/moon.png') center top no-repeat;
-    z-index: 102;
-    position: relative;
-    width: 100%;
-    @include media($mobile) {
-      background: none;
+        color: #000;
+
+        @include outer-container;
+        @include media($mobile) {
+            // color: $white;
+            padding: 0;
+        }
     }
-  }
-  .earth {
-    background: url('../images/earth.png') center no-repeat;
-    width: 383px;
-    height: 382px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 90;
-  }
-  .rocket {
-    background: url('../images/moon-rocket.png') center no-repeat;
-    width: 122px;
-    height: 123px;
-    position: absolute;
-    right: 100px;
-    top: -170px;
-    z-index: 101;
-  }
-  .astronaut {
-    background: url('../images/astronaut.png') center no-repeat;
-    width: 185px;
-    height: 293px;
-    position: absolute;
-    left: 10px;
-    top: -150px;
-  }
+    .moon-overlay-bg {
+        position: absolute;
+        top: -54px;
+        left: 50%;
+
+        min-width: 1024px;
+        padding: 122px 0;
+        margin-left: em(-480);
+
+        @include media($mobile) {
+            display: none;
+        }
+    }
+    .moon {
+        position: relative;
+        z-index: 102;
+
+        width: 100%;
+        min-height: 1616px;
+
+        background: url("../images/moon.png") center top no-repeat;
+
+        @include media($mobile) {
+            background: none;
+        }
+    }
+    .earth {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 90;
+
+        width: 383px;
+        height: 382px;
+
+        background: url("../images/earth.png") center no-repeat;
+    }
+    .rocket {
+        position: absolute;
+        top: -170px;
+        right: 100px;
+        z-index: 101;
+
+        width: 122px;
+        height: 123px;
+
+        background: url("../images/moon-rocket.png") center no-repeat;
+    }
+    .astronaut {
+        position: absolute;
+        top: -150px;
+        left: 10px;
+
+        width: 185px;
+        height: 293px;
+
+        background: url("../images/astronaut.png") center no-repeat;
+    }
 }
 
 
 .lt-description {
-  @include span-columns(6);
-  @include shift(3);
-  font-size: 14px;
-  text-align: center;
-  padding-bottom: 80px;
-  @include media($mobile) {
-      @include span-columns(5);
-      @include shift(.5);
-      color: $white;
-  }
-}
+    padding-bottom: 80px;
 
-.lt-list {
-  padding: 0;
-  margin: 0;
-  li {
-    @include span-columns(4);
-    @include omega(3n);
-    background: url('../images/bg-lt.png') center no-repeat;
-    background-size: 100%;
-    height: 390px;
-    padding-top: 140px;
-    position: relative;
-    // outline: yellow dotted;
+    font-size: 14px;
 
+    text-align: center;
+
+    @include span-columns(6);
+    @include shift(3);
     @include media($mobile) {
+        color: $white;
+
         @include span-columns(5);
         @include shift(.5);
     }
+}
 
-    h3 {
-      text-align: center;
-      font-size: 15px;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
+.lt-list {
+    padding: 0;
+    margin: 0;
+    li {
+        position: relative;
 
-    p {
-      padding: 0 35px;
-      font-size: 14px;
-      line-height: 22px;
-      text-align: center;
-    }
+        height: 390px;
+        padding-top: 140px;
 
-    .lt-picture {
-      position: absolute;
-      top: -30px;
-      left: 50%;
-      width: 231px;
-      height: 154;
-      margin-left: -115px;
-      img {
-        width: 100%;
-      }
+        background: url("../images/bg-lt.png") center no-repeat;
+        background-size: 100%;
+
+        @include span-columns(4);
+        @include omega(3n);
+        // outline: yellow dotted;
+        @include media($mobile) {
+            @include span-columns(5);
+            @include shift(.5);
+        }
+
+        h3 {
+            font-size: 15px;
+            font-weight: bold;
+
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        p {
+            padding: 0 35px;
+
+            font-size: 14px;
+            line-height: 22px;
+
+            text-align: center;
+        }
+
+        .lt-picture {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+
+            width: 231px;
+            height: 154;
+            margin-left: -115px;
+            img {
+                width: 100%;
+            }
+        }
     }
-  }
 }
 
 .lt-obs {
-  @include span-columns(12);
-  font-size: 13px;
-  padding-top: 0;
-  margin-top: 37px;
-  text-align: center;
-  @include media($mobile) {
-      @include span-columns(5);
-      @include shift(.5);
-      color: $white;
-      margin-top: 45px;
-  }
+    display: none;
+    padding-top: 0;
+    margin-top: 37px;
+
+    font-size: 13px;
+
+    text-align: center;
+
+    @include span-columns(12);
+    // color: red;
+    @include media($mobile) {
+        margin-top: 45px;
+
+        color: $white;
+
+        @include span-columns(5);
+        @include shift(.5);
+    }
 }
 
 .see-more-lts {
-  background-color: #1abc9c;
-  text-decoration: none;
-  transition: 300ms;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: bold;
-  display: inline-block;
-  width: 70%;
-  text-align: center;
-  margin-top: 30px;
-  height: 52px;
-  line-height: 52px;
-  margin-bottom: 110px;
+    display: inline-block;
+    width: 70%;
+    height: 52px;
+    margin-top: 30px;
+    margin-bottom: 110px;
+
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 52px;
+
+    transition: 300ms;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #fff;
+    background-color: #1abc9c;
 }
 
 
 .btn-lt {
-  background-color: #1ABC9C;
-  line-height: 50px;
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  width: 329px;
-  height: 55px;
-  position: relative;
-  z-index: 6;
-  transition: all 500ms;
-  top: 6px;
-  left: 8px;
-  text-transform: uppercase;
-  color: $white;
-  font-weight: bold;
-  // @include media($mobile) {
-  //   top: -10px;
-  //   left: 12px;
-  //   width: 305px;
-  // }
+    position: relative;
+    top: 6px;
+    left: 8px;
+    z-index: 6;
 
-  a {
-    text-transform: uppercase;
-    color: $white;
-    font-size: 16px;
+    display: inline-block;
+    width: 329px;
+    height: 55px;
+
     font-weight: bold;
-  }
+    line-height: 50px;
 
-  &::after,&::before{
-    content:" ";
-    width: 0;
-    height: 0;
-    position: absolute;
-  }
-  &::after{
-    top: -5px;
-    right: -0px;
-    border-top: 5px solid transparent;
-    border-left: 15px solid #17A286;
-    border-bottom: 0px solid transparent;
     transition: all 500ms;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
 
-    // top: -18px;
-    // right: -2px;
-    // border-top: 15px solid transparent;
-    // border-left: 15px solid #17A286;
-    // border-bottom: 8px solid transparent;
-    // border-right: 0px solid transparent;
-    // transition: all 500ms;
-    // transform: rotate(27deg);
-  }
+    color: $white;
+    background-color: #1abc9c;
+    // @include media($mobile) {
+    //   top: -10px;
+    //   left: 12px;
+    //   width: 305px;
+    // }
 
-  &::before{
-    top: -5px;
-    left: -0px;
-    border-top: 5px solid transparent;
-    border-right: 15px solid #17A286;
-    border-bottom: 0px solid transparent;
-    transition: all 500ms;
+    a {
+        font-size: 16px;
+        font-weight: bold;
 
+        text-transform: uppercase;
 
-    // top: -18px;
-    // left: -2px;
-    // border-top: 15px solid transparent;
-    // border-right: 15px solid #17A286;
-    // border-bottom: 8px solid transparent;
-    // border-left: 0px solid transparent;
-    // transition: all 500ms;
-    // transform: rotate(-29deg);
-  }
-
-  &:hover {
-    background-color: #F2C600;
-    &::after{
-       border-left: 15px solid #DDB607;
+        color: $white;
     }
-    &::before{
-      border-right: 15px solid #DDB607;
+
+    &::after,
+    &::before {
+        position: absolute;
+
+        width: 0;
+        height: 0;
+
+        content: " ";
     }
-  }
+    &::after {
+        top: -5px;
+        right: -0;
+
+        transition: all 500ms;
+
+        border-top: 5px solid transparent;
+        border-bottom: 0 solid transparent;
+        border-left: 15px solid #17a286;
+
+        // top: -18px;
+        // right: -2px;
+        // border-top: 15px solid transparent;
+        // border-left: 15px solid #17A286;
+        // border-bottom: 8px solid transparent;
+        // border-right: 0px solid transparent;
+        // transition: all 500ms;
+        // transform: rotate(27deg);
+    }
+
+    &::before {
+        top: -5px;
+        left: -0;
+
+        transition: all 500ms;
+
+        border-top: 5px solid transparent;
+        border-right: 15px solid #17a286;
+        border-bottom: 0 solid transparent;
+
+
+        // top: -18px;
+        // left: -2px;
+        // border-top: 15px solid transparent;
+        // border-right: 15px solid #17A286;
+        // border-bottom: 8px solid transparent;
+        // border-left: 0px solid transparent;
+        // transition: all 500ms;
+        // transform: rotate(-29deg);
+    }
+
+    &:hover {
+        background-color: #f2c600;
+        &::after {
+            border-left: 15px solid #ddb607;
+        }
+        &::before {
+            border-right: 15px solid #ddb607;
+        }
+    }
 }
 
 // Media Queries
 
 
 @include iphone3 {
+    .lt-list {
+        li {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            h3 {
+                margin-top: 0;
+                margin-bottom: 8px;
+            }
+            p {
+                height: 72px;
+                padding: 0 35px;
+                overflow: hidden;
 
-
-  .lt-list {
-    li {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      h3 {
-        margin-bottom: 8px;
-        margin-top: 0;
-      }
-      p {
-        padding: 0 35px;
-        font-size: 12px;
-        line-height: 18px;
-        height: 72px;
-        overflow: hidden;
-        // outline: red solid;
-      }
+                font-size: 12px;
+                line-height: 18px;
+                // outline: red solid;
+            }
+        }
     }
-  }
 
-  .btn-lt {
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin-left: 0;
-  }
+    .btn-lt {
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        margin-left: 0;
+    }
 }
 
 @include iphone4 {
+    .lt-list {
+        li {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            h3 {
+                margin-top: 0;
+                margin-bottom: 8px;
+            }
+            p {
+                height: 72px;
+                padding: 0 35px;
+                overflow: hidden;
 
-
-  .lt-list {
-    li {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      h3 {
-        margin-bottom: 8px;
-        margin-top: 0;
-      }
-      p {
-        padding: 0 35px;
-        font-size: 12px;
-        line-height: 18px;
-        height: 72px;
-        overflow: hidden;
-        // outline: red solid;
-      }
+                font-size: 12px;
+                line-height: 18px;
+                // outline: red solid;
+            }
+        }
     }
-  }
 
-  .btn-lt {
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin-left: 0;
-  }
+    .btn-lt {
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        margin-left: 0;
+    }
 }
 
 @include iphone5 {
+    .lt-list {
+        li {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            h3 {
+                margin-top: 0;
+                margin-bottom: 8px;
+            }
+            p {
+                height: 72px;
+                padding: 0 35px;
+                overflow: hidden;
 
-
-  .lt-list {
-    li {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      h3 {
-        margin-bottom: 8px;
-        margin-top: 0;
-      }
-      p {
-        padding: 0 35px;
-        font-size: 12px;
-        line-height: 18px;
-        height: 72px;
-        overflow: hidden;
-        // outline: red solid;
-      }
+                font-size: 12px;
+                line-height: 18px;
+                // outline: red solid;
+            }
+        }
     }
-  }
 
-  .btn-lt {
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin-left: 0;
-  }
+    .btn-lt {
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        margin-left: 0;
+    }
 }
 
 @include iphone6 {
+    .lt-list {
+        li {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            h3 {
+                margin-top: 0;
+                margin-bottom: 8px;
+            }
+            p {
+                height: 74px;
+                padding: 0 35px;
+                overflow: hidden;
 
-
-  .lt-list {
-    li {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      h3 {
-        margin-bottom: 8px;
-        margin-top: 0;
-      }
-      p {
-        padding: 0 35px;
-        font-size: 15px;
-        overflow: hidden;
-        // outline: red solid;
-
-        line-height: 19px;
-        height: 74px;
-      }
+                font-size: 15px;
+                // outline: red solid;
+                line-height: 19px;
+            }
+        }
     }
-  }
 
-  .btn-lt {
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin-left: 0;
-  }
+    .btn-lt {
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        margin-left: 0;
+    }
 }
 
 @include iphone6-plus {
+    .lt-list {
+        li {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            h3 {
+                margin-top: 0;
+                margin-bottom: 8px;
+            }
+            p {
+                height: 74px;
+                padding: 0 35px;
+                overflow: hidden;
 
-
-  .lt-list {
-    li {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      h3 {
-        margin-bottom: 8px;
-        margin-top: 0;
-      }
-      p {
-        padding: 0 35px;
-        font-size: 15px;
-        overflow: hidden;
-        // outline: red solid;
-
-        line-height: 19px;
-        height: 74px;
-      }
+                font-size: 15px;
+                // outline: red solid;
+                line-height: 19px;
+            }
+        }
     }
-  }
 
-  .btn-lt {
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin-left: 0;
-  }
+    .btn-lt {
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        margin-left: 0;
+    }
 }
 
 
 .confirmed {
-  .btn-lt {
-    background-color: #F2C600;
-    &::after{
-       border-left: 15px solid #DDB607;
+    .btn-lt {
+        background-color: #f2c600;
+        &::after {
+            border-left: 15px solid #ddb607;
+        }
+        &::before {
+            border-right: 15px solid #ddb607;
+        }
     }
-    &::before{
-      border-right: 15px solid #DDB607;
-    }
-
-  }
 }

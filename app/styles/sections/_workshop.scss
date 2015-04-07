@@ -1,67 +1,79 @@
 .workshop {
-  background: url('../images/workshop_bg.jpg') repeat-x bottom center;
-  margin-bottom: 90px;
-  display: none;
+    margin-bottom: 90px;
+
+    background: url("../images/workshop_bg.jpg") repeat-x bottom center;
+    // display: none;
 }
 .workshop-wrapper {
-  @include outer-container;
+    @include outer-container;
 }
 
 
 .content-workshop-presenter {
-  position: relative;
-  margin: 0 auto;
-  margin-top: 110px;
-  width: 464px;
-  .float-circle {
-    position: absolute;
-    background: url('../images/circle-workshop.png');
-    width: 690px;
-    height: 303px;
-    left: -85px;
-    top: 155px;
-  }
+    position: relative;
+
+    width: 464px;
+    margin: 0 auto;
+    margin-top: 110px;
+    .float-circle {
+        position: absolute;
+        top: 155px;
+        left: -85px;
+
+        width: 690px;
+        height: 303px;
+
+        background: url("../images/circle-workshop.png");
+    }
 }
 
 .workshop-info {
-  text-align: center;
-  h3 {
     text-align: center;
-    padding: 0;
-    margin: 30px 0 10px 0;
-    font-size: 37px;
-    font-weight: 300;
-    color: #2c3e50;
-  }
-  span {
-    text-transform: uppercase;
-    color: #1abc9c;
-    font-size: 13px;
-    font-weight: bold;
-  }
+    h3 {
+        padding: 0;
+        margin: 30px 0 10px 0;
+
+        font-size: 37px;
+        font-weight: 300;
+
+        text-align: center;
+
+        color: #2c3e50;
+    }
+    span {
+        font-size: 13px;
+        font-weight: bold;
+
+        text-transform: uppercase;
+
+        color: #1abc9c;
+    }
 }
 
 
 .workshop-subscription {
-  margin-top: 33px;
-  >ul {
-    li {
-      width: 50%;
-      float: left;
-      a {
-        color: #fff;
-        display: block;
-        text-align: center;
-        text-transform: uppercase;
-        padding: 13px 0;
-        font-weight: 700;
-      }
-      &:first-child {
-        @include btn-hover(#f2c600,#2c3e50);
-      }
-      &:last-child {
-        @include btn-hover(#1abc9c,#2c3e50);
-      }
+    margin-top: 33px;
+    > ul {
+        li {
+            // float: left;
+            width: 100%;
+            a {
+                display: block;
+                padding: 13px 0;
+
+                font-weight: 700;
+
+                text-align: center;
+                text-transform: uppercase;
+
+                color: #fff;
+            }
+            &:first-child {
+                @include btn-hover(#f2c600,#2c3e50);
+            }
+            &:last-child {
+                @include btn-hover(#1abc9c,#2c3e50);
+            }
+        }
     }
-  }
 }
